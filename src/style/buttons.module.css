@@ -1,0 +1,26 @@
+@value tokens: "./tokens.module.css";
+@value backgroundColor, primaryColor, blackColor from tokens;
+
+.inputFill {
+  padding: 1rem 1rem;
+  border: .2rem solid backgroundColor;
+  background-color: backgroundColor;
+}
+
+.buttonBlack {
+  /* background-image: url(/assets/buttons/button_full.svg); */
+  background-color: blackColor;
+  border: none;
+  background-repeat: no-repeat;
+  display: inline-block;
+  background-size: contain;
+  padding: 2rem 2.5rem;
+  margin: 2rem 0;
+  background-position: 50% 50%;
+  composes: button from "../style/typo.module.css";
+}
+
+.backButton {
+  color: primaryColor; 
+  display: inline-block;
+}

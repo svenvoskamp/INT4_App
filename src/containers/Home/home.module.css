@@ -1,0 +1,34 @@
+@value tokens: "../../style/tokens.module.css";
+@value primaryColor from tokens;
+
+.content {
+    composes: view from "../../style/layout.module.css";
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh;
+  }
+  
+.title {
+    composes: title from "../../style/typo.module.css";
+    font-size: 5rem;
+    color: primaryColor;
+    margin-bottom: 2rem;
+    width: 50%;
+}   
+
+.text {
+    composes: text from "../../style/typo.module.css";
+    margin-bottom: 2rem;
+    width: 50%;
+}    
+
+.button {
+    composes: buttonBlack from "../../style/buttons.module.css";
+}
+  
+  
+@media screen and (max-width: 750px) {
+
+}
+  

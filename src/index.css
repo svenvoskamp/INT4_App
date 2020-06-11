@@ -1,0 +1,26 @@
+@import './reset.css';
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+/* stylelint-disable */
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+/* stylelint-enable */
+
+body {
+  margin: 0;
+  padding: 0;
+  margin: 0 auto;
+  background-color: #f2f2f2;
+}
+
+
+.form0 {
+  background-color: red;
+}

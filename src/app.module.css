@@ -1,0 +1,6 @@
+@value tokens: "./style/tokens.module.css";
+@value backgroundColor from tokens;
+
+body {
+    background-color: backgroundColor;
+}
