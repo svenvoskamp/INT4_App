@@ -41,9 +41,9 @@ class BookingStore {
     if(bookingResult == undefined){
     user.linkBooking(booking);
     booking.linkUser(user);
+    }
     booking.linkType(type);
     booking.linkCountry(country);
-    }
   }
 }
 

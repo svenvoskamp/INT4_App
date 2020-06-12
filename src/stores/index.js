@@ -23,7 +23,9 @@ class RootStore {
     this.bookingStore = new BookingStore(this);
     this.countryStore = new CountryStore(this);
     this.userStore = new UserStore(this);
+    this.countryStore.getCountries();
     this.typeStore = new TypeStore(this);
+    this.typeStore.getTypes();
     this.uiStore = new UiStore(this);
   }
 }
