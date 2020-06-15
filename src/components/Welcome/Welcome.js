@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-
+import { Switch, Route, NavLink, Redirect } from "react-router-dom";
 import { useStores } from "../../hooks/index";
 import { useHistory } from "react-router-dom";
 
@@ -27,6 +27,9 @@ const Welcome = () => {
     <>
     <h1>Proficiat met jullie {booking.count} jarig jubileum! {booking.name1} & {booking.name2} </h1>
     <p>Jullie zullen een {journeyType} reis maken door het prachtige {country.country}</p>
+    <NavLink  exact strict to="/dashboard">
+        <button>Wij zijn er klaar voor</button>
+      </NavLink>
     </>
   );
 };

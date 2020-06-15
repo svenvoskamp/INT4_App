@@ -7,10 +7,10 @@ configure({
 
 class Type {
 
-  constructor({id = v4(), type, image}) {
+  constructor({id = v4(), type, img}) {
     this.id = id;
     this.type = type;
-    this.image = image;
+    this.img = img;
   }
 }
 
@@ -27,7 +27,8 @@ const typeConverter = {
     const data = snapshot.data(options);
     return new Type({
       id: snapshot.id,
-      type: data.type
+      type: data.type,
+      img: data.img
     });
   }
 };

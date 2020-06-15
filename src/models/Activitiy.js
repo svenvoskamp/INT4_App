@@ -7,36 +7,49 @@ configure({
 
 class Activity {
 
-  constructor({id = v4(), day,  type, country, img, title, dayId, typeId, countryId}) {
+  constructor({id = v4(), img, title, day, typeId, countryId, steps = []}) {
     this.id = id;
-    this.day = day;
-    this.type = type;
-    this.country = country;
     this.img = img;
     this.title = title;
-    this.dayId = dayId;
+    this.day = day;
     this.typeId = typeId;
     this.countryId = countryId;
+    this.steps = steps;
   }
 
-  linkDay(day) {
-    !this.day.includes(day) && this.day.push(day);
+  linkStep(step) {
+    !this.steps.includes(step) && this.steps.push(step);
   }
-  linkType(type) {
-    !this.type.includes(type) && this.type.push(type);
-  }
-  linkCountry(country) {
-    !this.country.includes(country) && this.country.push(country);
-  }
+
 }
 
 decorate(Activity, {
-  day: observable,
-  type: observable,
-  country: observable,
-  linkDay: action,
-  linkType: action,
-  linkCountry: action
+  steps: observable,
+  linkStep: action
 });
 
+const activityConverter = {
+  toFirestore: function(activity) {
+    return {
+      img: activity.img,
+      title: activity.title,
+      day: activity.day,
+      typeId: activity.typeId,
+      countryId: activity.countryId
+    };
+  },
+  fromFirestore: function(snapshot, options) {
+    const data = snapshot.data(options);
+    return new Activity({
+      id: snapshot.id,
+      img: data.img,
+      title: data.title,
+      day: data.day,
+      typeId: data.typeId,
+      countryId: data.countryId
+    });
+  }
+};
+
+export {activityConverter};
 export default Activity;

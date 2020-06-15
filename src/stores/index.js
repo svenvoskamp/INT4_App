@@ -4,6 +4,9 @@ import BookingStore from "./BookingStore";
 import UserStore from "./UserStore";
 import TypeStore from "./TypeStore";
 import CountryStore from "./CountryStore";
+import ActivityStore from "./ActivityStore";
+import StepStore from "./StepStore";
+
 
 
 
@@ -27,6 +30,9 @@ class RootStore {
     this.typeStore = new TypeStore(this);
     this.typeStore.getTypes();
     this.uiStore = new UiStore(this);
+    this.activityStore = new ActivityStore(this);
+    this.activityStore.getActivities();
+    this.stepStore = new StepStore(this);
   }
 }
 

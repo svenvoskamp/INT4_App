@@ -1,5 +1,5 @@
 import {decorate, observable, action, configure} from 'mobx';
-
+import ActivityService from "../services/ActivityService";
 
 configure({
   enforceActions: 'observed'
@@ -8,22 +8,43 @@ configure({
 class ActivityStore {
   constructor(rootStore) {
     this.rootStore = rootStore;
+    this.activityService = new ActivityService(this.rootStore.firebase)
     this.activities = [];
   }
 
 
   getActivityById = id => this.activities.find(activity => activity.id === id);
 
-  getActivitiesForBooking(typeId, countryId, dayId){
-    countryActivities = this.activities.filter(activity => activity.countryId = countryId);
-    countryAndTypeActivities = countryActivities.filter(activity => activity.typeId = typeId);
-    getActivityForCurrentDay(countryAndTypeActivities, dayId);
+
+
+  getActivityForCurrentDay(typeId, countryId, day){
+    console.log("hoi");
+    const countryActivities = this.activities.filter(activity => activity.countryId.includes(countryId));
+    console.log(countryActivities);
+    const typeActivities = countryActivities.filter(activity => activity.typeId.includes(typeId));
+    console.log(typeActivities);
+    const currentDayActivity = typeActivities.find(activity => activity.day === day);
+    return currentDayActivity;
   }
 
-  getActivityForCurrentDay(activities, dayId){
-    currentActivity = activities.find(activity => activity.dayId = dayId);
-    return currentActivity;
-  }
+
+
+  addActivity(activity) {
+    let activityExist = this.activities.findIndex(item => item.id === activity.id);
+    if (activityExist === -1) {
+      this.activities.push(activity);
+    }
+  };
+
+  getActivities = async () => {
+     await this.activityService.getActivities(this.onActivityChange);
+   }
+
+   onActivityChange = activity => {
+     console.log(activity);
+     this.addActivity(activity);
+   }
+
 
 }
 

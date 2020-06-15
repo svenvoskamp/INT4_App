@@ -7,7 +7,7 @@ class UiStore {
     this.rootStore = rootStore;
     this.currentUser = undefined;
     this.currentBooking = undefined;
-    this.currentDay = undefined;
+    this.currentDay = 1;
     this.currentCountry = undefined;
     this.currentType = undefined;
     this.authService = new AuthService(this.rootStore.firebase, this.onAuthStateChanged);

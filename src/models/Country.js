@@ -27,7 +27,8 @@ const countryConverter = {
     const data = snapshot.data(options);
     return new Country({
       id: snapshot.id,
-      country: data.country
+      country: data.country,
+      img: data.img
     });
   }
 };
