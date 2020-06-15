@@ -7,9 +7,10 @@ configure({
 
 class Step {
 
-  constructor({id = v4(), currentStep, title, img1, img2, img3, text1, text2, text3, extra1, extra2, extra3, activityId}) {
+  constructor({id = v4(), currentStep, title, tagline, img1, img2, img3, text1, text2, text3, extra1, extra2, extra3, activityId}) {
     this.id = id;
     this.currentStep = currentStep;
+    this.tagline = tagline;
     this.title = title;
     this.img1 = img1;
     this.img2 = img2;
@@ -33,6 +34,7 @@ const stepConverter = {
     return {
       currentStep: step.currentStep,
       title: step.title,
+      tagline: step.tagline,
       img1: step.img1,
       img2: step.img2,
       img3: step.img3,
@@ -51,6 +53,7 @@ const stepConverter = {
       id: snapshot.id,
       currentStep: data.currentStep,
       title: data.title,
+      tagline: data.tagline,
       img1: data.img1,
       img2: data.img2,
       img3: data.img3,

@@ -9,7 +9,9 @@ const Step1 = () => {
 
   return (
     <>
-    <h1>{currentStep.title}</h1>
+    <h1>{uiStore.currentBooking.name1} & {uiStore.currentBooking.name2}</h1>
+    <h2>{currentStep.tagline}</h2>
+    <p>{currentStep.text1}</p>
     <NavLink exact strict to="/dashboard">
         <button>Ga terug</button>
     </NavLink>

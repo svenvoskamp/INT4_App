@@ -6,10 +6,18 @@ import { useHistory, NavLink } from "react-router-dom";
 const Step2 = () => {
   const { uiStore, stepStore} = useStores();
   const currentStep = stepStore.getStepByCurrentStep(2);
+  const pants = uiStore.currentBooking.pants;
+  let user;
+  if(pants === "1" || pants === "2"){
+    user = uiStore.currentBooking.name1;
+  }else {
+    user = uiStore.currentBooking.name2;
+  }
 
   return (
     <>
-    <h1>{currentStep.title}</h1>
+    <h1>{user}, {currentStep.title}</h1>
+    <h2>{currentStep.tagline}</h2>
     <NavLink exact strict to="/step1">
         <button>Ga terug</button>
     </NavLink>

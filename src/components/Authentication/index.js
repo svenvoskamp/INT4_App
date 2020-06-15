@@ -13,7 +13,6 @@ import Step3 from "../ActivityOne/Step3";
 import Step4 from "../ActivityOne/Step4";
 import Step5 from "../ActivityOne/Step5";
 import Step6 from "../ActivityOne/Step6";
-import Step7 from "../ActivityOne/Step7";
 
 import BStep1 from "../ActivityTwo/BStep1";
 import BStep2 from "../ActivityTwo/BStep2";
@@ -108,16 +107,6 @@ const Authentication = () => {
         {
             stepStore.steps.length > 0 && uiStore.currentDay === 1  ? (
           <Step6/>
-            ):
-            (
-              <Redirect to={ROUTES.dashboard}/>
-            )
-        }
-        </Route>
-        <Route exact path={ROUTES.step7}>
-        {
-            stepStore.steps.length > 0 && uiStore.currentDay === 1  ? (
-          <Step7/>
             ):
             (
               <Redirect to={ROUTES.dashboard}/>
