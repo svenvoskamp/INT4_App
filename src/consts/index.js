@@ -9,7 +9,18 @@ const ROUTES = {
   step4: "/step4",
   step5: "/step5",
   step6: "/step6",
-  step7: "/step7"
+  step7: "/step7",
+  bstep1: "/bstep1",
+  bstep2: "/bstep2",
+  bstep3: "/bstep3",
+  bstep4: "/bstep4",
+  bstep5: "/bstep5",
+  bstep6: "/bstep6",
+  cstep1: "/cstep1",
+  cstep2: "/cstep2",
+  cstep3: "/cstep3",
+  end: "/end"
+
 };
 
 export { ROUTES };

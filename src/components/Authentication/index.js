@@ -4,7 +4,6 @@ import { Switch, Route, NavLink, Redirect } from "react-router-dom";
 import { ROUTES } from "../../consts";
 import Login from "./Login";
 import Dashboard from "../Dashboard/Dashboard";
-import ActivityOne from "../ActivityOne/index";
 import Welcome from "../Welcome/Welcome";
 import { useStores } from "../../hooks/index";
 import { useObserver } from "mobx-react-lite";
@@ -16,6 +15,21 @@ import Step5 from "../ActivityOne/Step5";
 import Step6 from "../ActivityOne/Step6";
 import Step7 from "../ActivityOne/Step7";
 
+import BStep1 from "../ActivityTwo/BStep1";
+import BStep2 from "../ActivityTwo/BStep2";
+import BStep3 from "../ActivityTwo/BStep3";
+import BStep4 from "../ActivityTwo/BStep4";
+import BStep5 from "../ActivityTwo/BStep5";
+import BStep6 from "../ActivityTwo/BStep6";
+
+import CStep1 from "../ActivityThree/CStep1";
+import CStep2 from "../ActivityThree/CStep2";
+import CStep3 from "../ActivityThree/CStep3";
+
+import End from "../End/End";
+
+
+
 
 const Authentication = () => {
   const { uiStore, stepStore } = useStores();
@@ -24,13 +38,17 @@ const Authentication = () => {
       <Switch>
         <Route exact path={ROUTES.dashboard}>
           {
+            uiStore.currentDay === 4 ? (
+              <Redirect to= {ROUTES.end}/>
+            ):
             uiStore.currentUser && uiStore.currentBooking ? (
               <>
               <Dashboard/>
               </>
             ):
+
             (
-              <Redirect to={ROUTES.login}/>
+              <Redirect to= {ROUTES.login}/>
             )
           }
         </Route>
@@ -116,6 +134,107 @@ const Authentication = () => {
             )
         }
         </Route>
+        <Route exact path={ROUTES.bstep1}>
+        {
+            stepStore.steps.length > 0 && uiStore.currentDay === 2  ? (
+          <BStep1/>
+            ):
+            (
+              <Redirect to={ROUTES.dashboard}/>
+            )
+        }
+        </Route>
+        <Route exact path={ROUTES.bstep2}>
+        {
+            stepStore.steps.length > 0 && uiStore.currentDay === 2  ? (
+          <BStep2/>
+            ):
+            (
+              <Redirect to={ROUTES.dashboard}/>
+            )
+        }
+        </Route>
+        <Route exact path={ROUTES.bstep3}>
+        {
+            stepStore.steps.length > 0 && uiStore.currentDay === 2  ? (
+          <BStep3/>
+            ):
+            (
+              <Redirect to={ROUTES.dashboard}/>
+            )
+        }
+        </Route>
+        <Route exact path={ROUTES.bstep4}>
+        {
+            stepStore.steps.length > 0 && uiStore.currentDay === 2  ? (
+          <BStep4/>
+            ):
+            (
+              <Redirect to={ROUTES.dashboard}/>
+            )
+        }
+        </Route>
+        <Route exact path={ROUTES.bstep5}>
+        {
+            stepStore.steps.length > 0 && uiStore.currentDay === 2  ? (
+          <BStep5/>
+            ):
+            (
+              <Redirect to={ROUTES.dashboard}/>
+            )
+        }
+        </Route>
+        <Route exact path={ROUTES.bstep6}>
+        {
+            stepStore.steps.length > 0 && uiStore.currentDay === 2  ? (
+          <BStep6/>
+            ):
+            (
+              <Redirect to={ROUTES.dashboard}/>
+            )
+        }
+        </Route>
+        <Route exact path={ROUTES.cstep1}>
+        {
+            uiStore.currentDay === 3  ? (
+          <CStep1/>
+            ):
+            (
+              <Redirect to={ROUTES.dashboard}/>
+            )
+        }
+        </Route>
+         <Route exact path={ROUTES.cstep2}>
+        {
+            uiStore.currentDay === 3  ? (
+          <CStep2/>
+            ):
+            (
+              <Redirect to={ROUTES.dashboard}/>
+            )
+        }
+        </Route>
+        <Route exact path={ROUTES.cstep3}>
+        {
+            uiStore.currentDay === 3  ? (
+          <CStep3/>
+            ):
+            (
+              <Redirect to={ROUTES.dashboard}/>
+            )
+        }
+        </Route>
+        <Route exact path={ROUTES.end}>
+        {
+            uiStore.currentDay === 4  ? (
+          <End/>
+            ):
+            (
+              <Redirect to={ROUTES.welcome}/>
+            )
+        }
+        </Route>
+
         <Route path={ROUTES.login}>
         {
              uiStore.currentUser && uiStore.currentBooking ? (
