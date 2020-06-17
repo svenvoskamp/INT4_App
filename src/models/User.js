@@ -7,8 +7,9 @@ configure({
 
 class User {
 
-  constructor({id = v4(), bookings = [], userData = [], name, email, bookingId}) {
+  constructor({id = v4(), password, bookings = [], userData = [], name, email, bookingId}) {
     this.id = id;
+    this.password = password;
     this.bookings = bookings;
     this.userData = userData;
     this.name = name;

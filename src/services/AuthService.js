@@ -9,6 +9,11 @@ class AuthService {
     this.auth.onAuthStateChanged(user => onAuthStateChanged(user));
   }
 
+  isRegistered = async email => {
+    const signInMethods =  await this.auth.fetchSignInMethodsForEmail(email);
+    return signInMethods.length === 0 ? false : true;
+  }
+
 
   signInWithPopup = async () => {
     try {
@@ -27,6 +32,18 @@ class AuthService {
       console.log(error);
       };
     };
+
+    signInWithEmailAndPassword = async (email, password) => {
+      try {
+        const result =  await this.auth.signInWithEmailAndPassword(email, password);
+        return result;
+    }
+    catch (error) {
+        return error.code;
+    }
+  };
+
+
   }
 
 
