@@ -5,19 +5,28 @@
   font-family: bely-display, serif;
   color: blackColor;
   text-decoration: none;
-  font-size: 2.2rem;
+  font-size: 3.5rem;
 }
 
 .subtitle {
   font-family: montserrat, sans-serif;
   color: blackColor;
   text-decoration: none;
-  font-size: 1.4rem;
+  font-size: 2rem;
+  font-style: italic;
 }
 
 .text {
   font-family: montserrat-medium, sans-serif;
-  font-size: 1.4rem;
+  font-size: 2rem;
+  color: blackColor;
+  padding-bottom: .5rem;
+}
+
+.bold {
+  font-family: Montserrat, sans-serif;
+  font-weight: 700;
+  font-size: 1.7rem;
   color: blackColor;
 }
 
@@ -25,4 +34,12 @@
   font-family: montserrat-medium, sans-serif;
   font-size: 1.6rem;
   color: backgroundColor;
+}
+
+.error {
+  font-family: Montserrat, sans-serif;
+  font-weight: 700;
+  font-style: italic;
+  font-size: 1.2rem;
+  color: primaryColor;
 }

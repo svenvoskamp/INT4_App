@@ -1,0 +1,104 @@
+.container {
+    width: 100%;
+    display: grid;
+    grid-template-rows: 1fr 70% 1fr;
+    height: 100vh;
+    background-image: url(/assets/backgrounds/dashboard_1.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.content {
+    grid-row: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.part {
+    height: 100%;
+}
+
+.header {
+    text-align: center;
+}
+
+.header_title {
+    composes: title from "../../style/typo.module.css";
+    margin-bottom: 2rem;
+}
+
+.button_container {
+    text-align: center;
+    margin-top: 10rem;
+}
+
+.button {
+    composes: buttonBlack from "../../style/buttons.module.css";
+}
+
+.login {
+    height: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+}
+
+.form_input {
+    composes: inputFill from "../../style/buttons.module.css";
+    width: 100%;
+    margin: .5rem 0;
+}
+
+.input_container {
+    composes: text from "../../style/typo.module.css";
+    padding: 1rem 0;
+    width: 50%;
+    margin: 0 auto;
+}
+
+.input_text {
+    composes: text from "../../style/typo.module.css";
+}
+
+.form_option {
+    composes: bold from "../../style/typo.module.css";
+    text-align: center;
+}
+
+.container_google {
+    display: flex;
+    justify-content: center;
+}
+
+.button_google {
+    background-image: url(/assets/buttons/button_red.svg);
+    background-color: transparent;
+    border: none;
+    background-repeat: no-repeat;
+    display: inline-block;
+    background-size: 100% 100%;
+    padding: 1.5rem 3rem;
+    background-position: 50% 50%;
+    composes: button from "../../style/typo.module.css";
+    overflow: visible;
+    cursor: pointer;
+    transition: all .3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.form_register {
+    composes: italic from "../../style/typo.module.css";
+    text-align: center;
+    text-decoration: none;
+}
+
+.register_bold {
+    font-weight: 700;
+}
+
+.form_error {
+    composes: error from "../../style/typo.module.css";
+}

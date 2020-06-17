@@ -1,8 +1,19 @@
 @value tokens: "./tokens.module.css";
 @value backgroundColor, primaryColor, blackColor from tokens;
 
+.inputFill {
+  padding: 1.8rem 2.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white ;
+  border: none;
+  border-radius: 1rem;
+  display: inline-block;
+}
+
 .buttonBlack {
-  background-image: url(/assets/buttons/button_full.svg);
+  background-image: url(/assets/buttons/button_black.svg);
   background-color: transparent;
   border: none;
   background-repeat: no-repeat;
@@ -14,12 +25,11 @@
   overflow: visible;
   cursor: pointer;
   transition: all .3s;
-  display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.buttonOrange {
+.buttonRed {
   background-image: url(/assets/buttons/button_red.svg);
   background-color: transparent;
   border: none;
@@ -28,11 +38,10 @@
   background-size: 100% 100%;
   padding: 1.5rem 3rem;
   background-position: 50% 50%;
-  composes: button from "../../style/typo.module.css";
+  composes: button from "../style/typo.module.css";
   overflow: visible;
   cursor: pointer;
   transition: all .3s;
-  display: flex;
   align-items: center;
   justify-content: center;
 }

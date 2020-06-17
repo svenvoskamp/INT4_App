@@ -1,10 +1,8 @@
 import React, { useState } from "react";
-
 import { useStores } from "../../hooks/index";
 import User from "../../models/User";
 import { useHistory } from "react-router-dom";
-
-
+import style from "./login.module.css"
 
 const Login = () => {
   const { uiStore, userStore } = useStores();
@@ -50,44 +48,38 @@ const Login = () => {
 
   return (
     <>
-     <form onSubmit={handleLogOut}>
-                <input type="submit" value="Log uit"/>
-          </form>
-    <div>
-      <form onSubmit={handleGoogleLogin}>
-        <input type="submit" value="Login with Google"/>
-      </form>
-    </div>
-
-  <form onSubmit={handleSubmit}>
-    <div>
-      <p>E-mail</p> <p>{emailError}</p>
-      <input
-        label="Email"
-        name="email"
-        type="email"
-        placeholder="Vul hier je email in"
-        value={email}
-        onChange={e => setEmail(e.currentTarget.value)}
-      />
-    </div>
-    <div>
-      <p>Wachtwoord</p> <p>{passwordError}</p>
-      <input
-        label="Password"
-        type="password"
-        name="Password"
-        placeholder="Vul hier je wachtwoord in"
-        value={password}
-        onChange={e => setPassword(e.currentTarget.value)}
-      />
-    </div>
-    <p>{formError}</p>
-    <div>
-      <input type="submit" value="Login"/>
-    </div>
-  </form>
-  </>
+     <div className={style.container}>
+        <div className={style.content}>
+          <div className={style.part}>
+            <div className={style.header}>
+              <h1 className={style.header_title}>Log in om jullie reis te starten</h1>
+            </div>
+            <div className={style.login}>
+              <form className={style.container_google} onSubmit={handleGoogleLogin}>
+                <input className={style.button_google} type="submit" value="Login met Google"/>
+              </form>
+              <p className={style.form_option}>OF</p>
+              <div> 
+                <form onSubmit={handleSubmit}>
+                  <div className={style.input_container}>
+                    <p className={style.input_text}>E-mail</p> <p className={style.form_error}>{emailError}</p>
+                    <input  className={style.form_input} label="Email" name="email" type="email" placeholder="Vul hier je email in" value={email} onChange={e => setEmail(e.currentTarget.value)} />
+                  </div>
+                  <div className={style.input_container}>
+                    <p className={style.input_text}>Wachtwoord</p> <p className={style.form_error}>{passwordError}</p>
+                    <input className={style.form_input} label="Password" type="password" name="Password" placeholder="Vul hier je wachtwoord in" value={password} onChange={e => setPassword(e.currentTarget.value)} />
+                  </div>
+                  <div className={style.button_container}>
+                    <p className={style.form_error}>{formError}</p>
+                    <input className={style.button} type="submit" value="Login"/>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </>
   );
 
 

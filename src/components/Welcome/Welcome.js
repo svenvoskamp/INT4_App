@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Switch, Route, NavLink, Redirect } from "react-router-dom";
 import { useStores } from "../../hooks/index";
-import { useHistory } from "react-router-dom";
+import style from "./welcome.module.css";
 
 const Welcome = () => {
   const { uiStore, countryStore, typeStore } = useStores();
@@ -25,11 +25,26 @@ const Welcome = () => {
 
   return (
     <>
-    <h1>Proficiat met jullie {booking.count} jarig jubileum! {booking.name1} & {booking.name2} </h1>
-    <p>Jullie zullen een {journeyType} reis maken door het prachtige {country.country}</p>
-    <NavLink  exact strict to="/dashboard">
-        <button>Wij zijn er klaar voor</button>
-      </NavLink>
+      <div className={style.container}>
+        <div className={style.content}>
+          <div className={style.part}>
+            <div className={style.header}>
+              <h1 className={style.header_title}>Proficiat met jullie {booking.count}-jarige jubileum! {booking.name1} & {booking.name2} </h1>
+              <div className={style.header_subtitle}>
+                <div className={style.line}></div>
+                <p className={style.subtitle}>"Jullie zullen een {journeyType} reis maken door het prachtige {country.country}"</p>
+              </div>
+            </div>
+          </div>
+          <video className={style.video} width="500" height = "500"  loop playsInline autoPlay muted>
+              <source src="/assets/video/ring_diamond.webm" type="video/webm"/>
+              <source src="/assets/video/ring_diamond.mp4" type="video/mp4"/>
+            </video>
+          <NavLink className={style.button_container}  exact strict to="/dashboard">
+          <p className={style.button}>Wij zijn er klaar voor</p>
+          </NavLink>
+        </div>
+      </div>
     </>
   );
 };
