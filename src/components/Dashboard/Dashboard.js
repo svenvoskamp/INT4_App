@@ -5,7 +5,9 @@ import style from "./dashboard.module.css";
 
 const Dashboard = () => {
 
-  const { uiStore, activityStore, stepStore, countryStore } = useStores();
+  const { uiStore, activityStore, stepStore, countryStore, typeStore } = useStores();
+  const typeid = typeStore.getTypeById(uiStore.currentBooking.typeId);
+  const type = typeid.type.toLowerCase();
   const day = uiStore.currentDay;
   const country = countryStore.getCountryById(uiStore.currentBooking.countryId);
   if(day === 1 || day === 2){
@@ -15,14 +17,13 @@ const Dashboard = () => {
   console.log(activeCurrentDayActivity);
   stepStore.getStepsForActivity(activeCurrentDayActivity.id);
 
-
   return (
     <>
-      <div className={style.container}>
+      <div className = {`container dashboard_${type}`}>
         <div className={style.content}>
           <div className={style.part}>
             <div className={style.header}>
-              <h1 className={style.header_title}>Jullie {uiStore.currentDay}de dag in {country.country}</h1>
+              <h1 className={style.header_title}>Jullie {uiStore.currentDay}e dag in {country.country}</h1>
               <div className={style.header_subtitle}>
                 <div className={style.line}></div>
                 <p className={style.subtitle}>"{activeCurrentDayActivity.title}"</p>

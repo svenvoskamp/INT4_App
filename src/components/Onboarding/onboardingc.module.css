@@ -2,7 +2,7 @@
 @value primaryColor, blackColor from tokens;
 
 .content {
-    width: 75%;
+    width: 50%;
     grid-row: 2;
     display: flex;
     flex-direction: column;

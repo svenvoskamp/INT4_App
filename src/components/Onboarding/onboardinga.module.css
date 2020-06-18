@@ -1,18 +1,8 @@
 @value tokens: "../../style/tokens.module.css";
 @value primaryColor, blackColor from tokens;
 
-.container {
-    width: 100%;
-    display: grid;
-    grid-template-rows: 1fr 70% 1fr;
-    height: 100vh;
-    background-image: url(/assets/backgrounds/dashboard_1.webp);
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
 .content {
-    width: 75%;
+    width: 65%;
     grid-row: 2;
     display: flex;
     flex-direction: column;
@@ -27,6 +17,7 @@
 .header_title {
     composes: title from "../../style/typo.module.css";
     margin-bottom: 2rem;
+    color: blackColor;
 }
 
 .header_subtitle {
@@ -35,6 +26,7 @@
     align-items: center;
     margin-bottom: 1.5rem;
     justify-content: center;
+    color: blackColor;
 }
 
 .line {
@@ -57,4 +49,8 @@
 
 .button {
     composes: buttonBlack from "../../style/buttons.module.css";
+}
+
+.bold {
+    font-weight: 600;
 }

@@ -4,7 +4,9 @@ import { useHistory, NavLink } from "react-router-dom";
 import style from "./step2.module.css";
 
 const Step2 = () => {
-  const { uiStore, stepStore} = useStores();
+  const { uiStore, stepStore, typeStore} = useStores();
+  const typeid = typeStore.getTypeById(uiStore.currentBooking.typeId);
+  const type = typeid.type.toLowerCase();
   const currentStep = stepStore.getStepByCurrentStep(2);
   const pants = uiStore.currentBooking.pants;
   let user;
@@ -16,15 +18,28 @@ const Step2 = () => {
 
   return (
     <>
-    <h1>{user}, {currentStep.title}</h1>
-    <h2>{currentStep.tagline}</h2>
-    <NavLink exact strict to="/step1">
-        <button>Ga terug</button>
-    </NavLink>
-
-    <NavLink exact strict to="/step3">
-        <button>Ga naar stap 3</button>
-    </NavLink>
+      <div className = {`container container_een_2_${type}`}>
+        <NavLink exact strict to="/step1">
+          <img src="/assets/buttons/back_white.svg" />
+        </NavLink>
+        <div className={style.content}>
+          <div className={style.part}>
+            <div className={style.header}>
+              <h1 className={style.header_title}>{user}, {currentStep.title}</h1>
+              <div className={style.header_subtitle}>
+                <div className={style.line}></div>
+                <p className={style.subtitle}>"{currentStep.tagline}"</p>
+              </div> 
+            </div>
+          </div>
+          <p className={style.text}>{currentStep.text1}</p>
+          <p className={style.text}>{currentStep.text2}</p>
+          <p className={style.text}>{currentStep.text3}</p>
+          <NavLink className={style.button_container} exact strict to="/step3">
+            <img src="/assets/buttons/arrow_white.svg" />
+          </NavLink>
+        </div>
+      </div>
     </>
   );
 };

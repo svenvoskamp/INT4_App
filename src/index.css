@@ -20,7 +20,140 @@ body {
   background-color: #f2f2f2;
 }
 
-
-.form0 {
-  background-color: red;
+.container{
+  width: 100%;
+  display: grid;
+  grid-template-rows: 2fr 60% 1fr;
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
+
+.welcome {
+  width: 100%;
+  display: grid;
+  grid-template-rows: 1fr 70% 1fr;
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.navigation {
+  padding-top: 3rem;
+}
+
+.webp .welcome {
+  background-image: url(/assets/backgrounds/dashboard_1.webp);
+}
+
+.webp .onboardinga {
+  background-image: url(/assets/backgrounds/dashboard_2.webp);
+}
+
+.webp .onboardingb {
+  background-image: url(/assets/backgrounds/dashboard_3.webp);
+}
+
+.webp .onboardingc {
+  background-image: url(/assets/backgrounds/dashboard_4.webp);
+}
+
+/* Dag 1 Dashboard */
+
+.webp .dashboard_avontuurlijk {
+  background-image: url(/assets/backgrounds/adventure_1.webp);
+}
+
+.webp .dashboard_cultuur {
+  background-image: url(/assets/backgrounds/culture_1.webp);
+}
+
+.webp .dashboard_ontspanning {
+  background-image: url(/assets/backgrounds/relax_1.webp);
+}
+
+/* Dag 1 Stap 1 */
+
+.webp .container_een_1_avontuurlijk {
+  background-image: url(/assets/backgrounds/adventure_2.webp);
+}
+
+.webp .container_een_1_cultuur {
+  background-image: url(/assets/backgrounds/culture_2.webp);
+}
+
+.webp .container_een_1_ontspanning {
+  background-image: url(/assets/backgrounds/relax_2.webp);
+}
+
+/* Dag 1 Stap 2 */
+
+.webp .container_een_2_avontuurlijk {
+  background-image: url(/assets/backgrounds/adventure_3.webp);
+}
+
+.webp .container_een_2_cultuur {
+  background-image: url(/assets/backgrounds/culture_3.webp);
+}
+
+.webp .container_een_2_ontspanning {
+  background-image: url(/assets/backgrounds/relax_3.webp);
+}
+
+/* Dag 1 Stap 3 */
+
+.webp .container_een_3_avontuurlijk {
+  background-image: url(/assets/backgrounds/adventure_4.webp);
+}
+
+.webp .container_een_3_cultuur {
+  background-image: url(/assets/backgrounds/culture_4.webp);
+}
+
+.webp .container_een_3_ontspanning {
+  background-image: url(/assets/backgrounds/relax_4.webp);
+}
+
+/* Dag 1 Stap 4 */
+
+.webp .container_een_4_avontuurlijk {
+  background-image: url(/assets/backgrounds/adventure_5.webp);
+}
+
+.webp .container_een_4_cultuur {
+  background-image: url(/assets/backgrounds/culture_5.webp);
+}
+
+.webp .container_een_4_ontspanning {
+  background-image: url(/assets/backgrounds/relax_5.webp);
+}
+
+/* Dag 1 Stap 5 */
+
+.webp .container_een_5_avontuurlijk {
+  background-image: url(/assets/backgrounds/adventure_6.webp);
+}
+
+.webp .container_een_5_cultuur {
+  background-image: url(/assets/backgrounds/culture_6.webp);
+}
+
+.webp .container_een_5_ontspanning {
+  background-image: url(/assets/backgrounds/relax_6.webp);
+}
+
+/* Dag 1 Stap 6 */
+
+.webp .container_een_6_avontuurlijk {
+  background-image: url(/assets/backgrounds/adventure_7.webp);
+}
+
+.webp .container_een_6_cultuur {
+  background-image: url(/assets/backgrounds/culture_7.webp);
+}
+
+.webp .container_een_6_ontspanning {
+  background-image: url(/assets/backgrounds/relax_7.webp);
+}
+
+

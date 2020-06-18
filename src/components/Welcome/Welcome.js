@@ -11,7 +11,7 @@ const Welcome = () => {
 
   return (
     <>
-      <div className={style.container}>
+      <div className= "welcome welcome_ring">
         <div className={style.content}>
           <div className={style.part}>
             <div className={style.header}>

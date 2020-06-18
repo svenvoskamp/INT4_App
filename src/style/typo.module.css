@@ -3,24 +3,28 @@
 
 .title {
   font-family: bely-display, serif;
-  color: blackColor;
+  color: white;
   text-decoration: none;
-  font-size: 3.5rem;
+  font-size: 4rem;
 }
 
 .subtitle {
   font-family: montserrat, sans-serif;
-  color: blackColor;
+  color: white;
   text-decoration: none;
   font-size: 2rem;
   font-style: italic;
+  font-weight: 300;
+  line-height: 1.4;
 }
 
 .text {
-  font-family: montserrat-medium, sans-serif;
-  font-size: 2rem;
-  color: blackColor;
+  font-family: montserrat, sans-serif;
+  font-weight: 300;
+  font-size: 2.2rem;
+  color: white;
   padding-bottom: .5rem;
+  line-height: 1.4;
 }
 
 .bold {

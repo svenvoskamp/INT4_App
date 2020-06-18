@@ -22,18 +22,16 @@ const OnboardingA = () => {
     journeyType = "avontuurlijke";
   }
 
-
-
   return (
     <>
-      <div className={style.container}>
+      <div className= "welcome onboardinga">
         <div className={style.content}>
           <div className={style.part}>
             <div className={style.header}>
               <h1 className={style.header_title}>Zijn jullie klaar voor deze prachtige reis?</h1>
               <div className={style.header_subtitle}>
                 <div className={style.line}></div>
-                <p className={style.subtitle}>"Jullie zullen een {journeyType} reis maken door het prachtige {country.country}". Focus op elkaar en geniet van intimiteit en relaxatie die jullie zullen beleven.”</p>
+                <p className={style.subtitle}>"Jullie zullen een <span className={style.bold}>{journeyType} reis </span> maken door het <span className={style.bold}>prachtige {country.country}</span>". Focus op elkaar en geniet van <span className={style.bold}>intimiteit en relaxatie</span> die jullie zullen beleven.”</p>
               </div>
             </div>
           </div>
