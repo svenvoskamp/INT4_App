@@ -17,14 +17,19 @@ class ActivityStore {
 
 
 
-  getActivityForCurrentDay(typeId, countryId, day){
+  getActivitiesForCurrentDay(typeId, countryId, currentDay){
     console.log("hoi");
     const countryActivities = this.activities.filter(activity => activity.countryId.includes(countryId));
     console.log(countryActivities);
     const typeActivities = countryActivities.filter(activity => activity.typeId.includes(typeId));
     console.log(typeActivities);
-    const currentDayActivity = typeActivities.find(activity => activity.day === day);
-    return currentDayActivity;
+    const currentDayActivities = typeActivities.filter(activity => activity.day === currentDay);
+    return currentDayActivities;
+  }
+
+  getActiveCurrentDayActivity(activities){
+    const activeCurrentDayActivity = activities.find(activity => activity.active === true);
+    return activeCurrentDayActivity
   }
 
 

@@ -7,9 +7,10 @@ configure({
 
 class Activity {
 
-  constructor({id = v4(), img, title, day, typeId, countryId, steps = []}) {
+  constructor({id = v4(), img, active = false,  title, day, typeId, countryId, steps = []}) {
     this.id = id;
     this.img = img;
+    this.active = active;
     this.title = title;
     this.day = day;
     this.typeId = typeId;
@@ -33,6 +34,7 @@ const activityConverter = {
     return {
       img: activity.img,
       title: activity.title,
+      active: activity.active,
       day: activity.day,
       typeId: activity.typeId,
       countryId: activity.countryId
@@ -43,6 +45,7 @@ const activityConverter = {
     return new Activity({
       id: snapshot.id,
       img: data.img,
+      active: data.active,
       title: data.title,
       day: data.day,
       typeId: data.typeId,

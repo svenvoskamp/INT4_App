@@ -1,0 +1,60 @@
+@value tokens: "../../style/tokens.module.css";
+@value primaryColor, blackColor from tokens;
+
+.container {
+    width: 100%;
+    display: grid;
+    grid-template-rows: 1fr 70% 1fr;
+    height: 100vh;
+    background-image: url(/assets/backgrounds/dashboard_1.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.content {
+    width: 75%;
+    grid-row: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 0 auto;
+}
+
+.header {
+    text-align: center;
+}
+
+.header_title {
+    composes: title from "../../style/typo.module.css";
+    margin-bottom: 2rem;
+}
+
+.header_subtitle {
+    composes: subtitle from "../../style/typo.module.css";
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    justify-content: center;
+}
+
+.line {
+    width: 2rem;
+    height: .3rem;
+    background-color: blackColor;
+    margin-right: 1rem;
+}
+
+.video {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.button_container {
+    text-align: center;
+}
+
+.button {
+    composes: buttonBlack from "../../style/buttons.module.css";
+}

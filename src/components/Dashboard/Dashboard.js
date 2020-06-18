@@ -9,9 +9,11 @@ const Dashboard = () => {
   const day = uiStore.currentDay;
   const country = countryStore.getCountryById(uiStore.currentBooking.countryId);
   if(day === 1 || day === 2){
-  const currentDayActivity = activityStore.getActivityForCurrentDay(uiStore.currentBooking.typeId, uiStore.currentBooking.countryId, day);
-  console.log(currentDayActivity);
-  stepStore.getStepsForActivity(currentDayActivity.id);
+  const currentDayActivities = activityStore.getActivitiesForCurrentDay(uiStore.currentBooking.typeId, uiStore.currentBooking.countryId, day);
+  console.log(currentDayActivities);
+  const activeCurrentDayActivity = activityStore.getActiveCurrentDayActivity(currentDayActivities);
+  console.log(activeCurrentDayActivity);
+  stepStore.getStepsForActivity(activeCurrentDayActivity.id);
 
 
   return (
@@ -23,14 +25,14 @@ const Dashboard = () => {
               <h1 className={style.header_title}>Jullie {uiStore.currentDay}de dag in {country.country}</h1>
               <div className={style.header_subtitle}>
                 <div className={style.line}></div>
-                <p className={style.subtitle}>"{currentDayActivity.title}"</p>
+                <p className={style.subtitle}>"{activeCurrentDayActivity.title}"</p>
               </div>
             </div>
           </div>
-          <video className={style.video} width="500" height = "500"  loop playsInline autoPlay muted>
-              <source src="/assets/video/type_adventure.webm" type="video/webm"/>
-              <source src="/assets/video/type_adventure.mp4" type="video/mp4"/>
-            </video>
+          {currentDayActivities.map(activity => (
+            <img src = {activity.img} alt ="activity"/>
+          ))
+          }
           <div className={style.button_container}>
             {day === 1 &&
             <NavLink exact strict to="/step1">

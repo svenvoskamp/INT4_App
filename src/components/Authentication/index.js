@@ -26,6 +26,9 @@ import CStep2 from "../ActivityThree/CStep2";
 import CStep3 from "../ActivityThree/CStep3";
 
 import End from "../End/End";
+import OnboardingA from "../Onboarding/OnboardingA";
+import OnboardingB from "../Onboarding/OnboardingB";
+import OnboardingC from "../Onboarding/OnboardingC";
 
 
 
@@ -56,6 +59,42 @@ const Authentication = () => {
              uiStore.currentUser && uiStore.currentBooking ? (
               <>
               <Welcome/>
+              </>
+            ):
+            (
+              <Redirect to={ROUTES.login}/>
+            )
+          }
+        </Route>
+        <Route exact path= {ROUTES.onboardinga}>
+          {
+             uiStore.currentUser && uiStore.currentBooking ? (
+              <>
+              <OnboardingA/>
+              </>
+            ):
+            (
+              <Redirect to={ROUTES.login}/>
+            )
+          }
+        </Route>
+        <Route exact path= {ROUTES.onboardingb}>
+          {
+             uiStore.currentUser && uiStore.currentBooking ? (
+              <>
+              <OnboardingB/>
+              </>
+            ):
+            (
+              <Redirect to={ROUTES.login}/>
+            )
+          }
+        </Route>
+        <Route exact path= {ROUTES.onboardingc}>
+          {
+             uiStore.currentUser && uiStore.currentBooking ? (
+              <>
+              <OnboardingC/>
               </>
             ):
             (

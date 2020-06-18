@@ -6,22 +6,7 @@ import style from "./welcome.module.css";
 const Welcome = () => {
   const { uiStore, countryStore, typeStore } = useStores();
   const booking = uiStore.currentBooking;
-  const country = countryStore.getCountryById(booking.countryId);
-  const type = typeStore.getTypeById(booking.typeId);
   const count = uiStore.currentBooking.count;
-  console.log(booking, type, country);
-  let journeyType;
-  if(type.type === "Ontspanning"){
-    journeyType = "ontspannende";
-  }
-  if(type.type === "Cultuur"){
-    journeyType = "culturele";
-  }
-
-  if(type.type === "Avontuurlijk"){
-    journeyType = "avontuurlijke";
-  }
-
 
 
   return (
@@ -33,7 +18,7 @@ const Welcome = () => {
               <h1 className={style.header_title}>Proficiat met jullie {booking.count}-jarige jubileum! {booking.name1} & {booking.name2} </h1>
               <div className={style.header_subtitle}>
                 <div className={style.line}></div>
-                <p className={style.subtitle}>"Jullie zullen een {journeyType} reis maken door het prachtige {country.country}"</p>
+                <p className={style.subtitle}>“Lets take a walk down memory lane and pretend to meet eachother all over again.”</p>
               </div>
             </div>
           </div>
@@ -63,7 +48,7 @@ const Welcome = () => {
               </>
               }
             </video>
-          <NavLink className={style.button_container}  exact strict to="/dashboard">
+          <NavLink className={style.button_container}  exact strict to="/onboardinga">
           <p className={style.button}>Wij zijn er klaar voor</p>
           </NavLink>
         </div>
