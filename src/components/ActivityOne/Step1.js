@@ -13,9 +13,16 @@ const Step1 = () => {
     <>
       <div className = {`container container_een_1_${type}`}>
         <div className="navigation">
-          <NavLink exact strict to="/dashboard">
-            <img src="/assets/buttons/back_white.svg" />
-          </NavLink>
+          <div className="navigation_back">
+            <NavLink exact strict to="/dashboard">
+              <img src="/assets/buttons/back_white.svg" />
+            </NavLink>
+          </div>
+          <div className="navigation_quit">
+            <NavLink exact strict to="/dashboard">
+            <img src="/assets/buttons/quit_white.svg" />
+            </NavLink>
+          </div>
         </div>
         <div className={style.content}>
           <div className={style.part}>

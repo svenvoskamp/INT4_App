@@ -2,7 +2,7 @@
 @value primaryColor, blackColor from tokens;
 
 .content {
-    width: 70%;
+    width: 50%;
     grid-row: 2;
     display: flex;
     flex-direction: column;
@@ -11,7 +11,7 @@
 }
 
 .header {
-    text-align: center;
+    margin-bottom: 5rem;
 }
 
 .header_title {
@@ -24,14 +24,18 @@
     display: flex;
     align-items: center;
     margin-bottom: 1.5rem;
-    justify-content: center;
+    justify-content: left;
 }
 
 .line {
     width: 2rem;
     height: .3rem;
-    background-color: blackColor;
+    background-color: white;
     margin-right: 1rem;
+}
+
+.info {
+    width: 80%;
 }
 
 .text {

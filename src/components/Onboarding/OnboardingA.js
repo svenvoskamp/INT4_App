@@ -30,7 +30,6 @@ const OnboardingA = () => {
             <div className={style.header}>
               <h1 className={style.header_title}>Zijn jullie klaar voor deze prachtige reis?</h1>
               <div className={style.header_subtitle}>
-                <div className={style.line}></div>
                 <p className={style.subtitle}>"Jullie zullen een <span className={style.bold}>{journeyType} reis </span> maken door het <span className={style.bold}>prachtige {country.country}</span>". Focus op elkaar en geniet van <span className={style.bold}>intimiteit en relaxatie</span> die jullie zullen beleven.”</p>
               </div>
             </div>
@@ -55,8 +54,8 @@ const OnboardingA = () => {
               </>
               }
             </video>
-          <NavLink className={style.button_container}  exact strict to="/onboardingb">
-          <p className={style.button}>Wij zijn er klaar voor</p>
+            <NavLink className={style.button_container} exact strict to="/onboardingb">
+            <img src="/assets/buttons/arrow_black.svg" />
           </NavLink>
         </div>
       </div>

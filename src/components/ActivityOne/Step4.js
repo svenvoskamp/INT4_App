@@ -18,9 +18,18 @@ const Step4 = () => {
   return (
     <>
       <div className = {`container container_een_4_${type}`}>
-        <NavLink exact strict to="/step3">
-          <img src="/assets/buttons/back_white.svg" />
-        </NavLink>
+      <div className="navigation">
+        <div className="navigation_back">
+          <NavLink exact strict to="/step3">
+            <img src="/assets/buttons/back_white.svg" />
+          </NavLink>
+        </div>
+        <div className="navigation_quit">
+            <NavLink exact strict to="/dashboard">
+              <img src="/assets/buttons/quit_white.svg" />
+            </NavLink>
+          </div>
+        </div>
         <div className={style.content}>
           <div className={style.part}>
             <div className={style.header}>
@@ -30,8 +39,10 @@ const Step4 = () => {
                 <p className={style.subtitle}>"{currentStep.tagline}"</p>
               </div> 
             </div>
+            <div className={style.info}>
+              <p className={style.text}>{currentStep.text1}</p>
+            </div>
           </div>
-          <p>{currentStep.text1}</p>
           <NavLink className={style.button_container} exact strict to="/step5">
             <img src="/assets/buttons/arrow_white.svg" />
           </NavLink>

@@ -12,6 +12,7 @@
 
 .header {
     text-align: center;
+    margin-bottom: 3rem;
 }
 
 .header_title {
@@ -30,8 +31,27 @@
 .line {
     width: 2rem;
     height: .3rem;
-    background-color: blackColor;
+    background-color: white;
     margin-right: 1rem;
+}
+
+.info {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 1rem;
+    text-align: center;
+    height: 100%;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.option_image {
+    width: 100%;
+    height: auto;
+}
+
+.option_image:nth-child(2){
+    align-self: center;
 }
 
 .video {

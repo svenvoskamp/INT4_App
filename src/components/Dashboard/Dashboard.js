@@ -20,20 +20,27 @@ const Dashboard = () => {
   return (
     <>
       <div className = {`container dashboard_${type}`}>
+        <div className="navigation">
+          <div className="menu">
+            <img className="menu_item" src="/assets/buttons/service_white.svg" />
+            <img className="menu_item" src="/assets/buttons/time_white.svg" />
+          </div>
+        </div>
         <div className={style.content}>
           <div className={style.part}>
             <div className={style.header}>
               <h1 className={style.header_title}>Jullie {uiStore.currentDay}e dag in {country.country}</h1>
               <div className={style.header_subtitle}>
-                <div className={style.line}></div>
                 <p className={style.subtitle}>"{activeCurrentDayActivity.title}"</p>
               </div>
             </div>
+            <div className={style.info}>
+              {currentDayActivities.map(activity => (
+                <img className={style.option_image} src = {activity.img} alt ="activity"/>
+              ))
+              }
+            </div>
           </div>
-          {currentDayActivities.map(activity => (
-            <img src = {activity.img} alt ="activity"/>
-          ))
-          }
           <div className={style.button_container}>
             {day === 1 &&
             <NavLink exact strict to="/step1">

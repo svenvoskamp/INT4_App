@@ -19,9 +19,18 @@ const Step2 = () => {
   return (
     <>
       <div className = {`container container_een_2_${type}`}>
-        <NavLink exact strict to="/step1">
-          <img src="/assets/buttons/back_white.svg" />
-        </NavLink>
+      <div className="navigation">
+        <div className="navigation_back">
+          <NavLink exact strict to="/step1">
+            <img src="/assets/buttons/back_white.svg" />
+          </NavLink>
+        </div>
+        <div className="navigation_quit">
+          <NavLink exact strict to="/dashboard">
+            <img src="/assets/buttons/quit_white.svg" />
+          </NavLink>
+        </div>
+        </div>
         <div className={style.content}>
           <div className={style.part}>
             <div className={style.header}>
@@ -31,10 +40,24 @@ const Step2 = () => {
                 <p className={style.subtitle}>"{currentStep.tagline}"</p>
               </div> 
             </div>
+            <div className={style.info}>
+              <div>
+                <img className={style.option_image} src={currentStep.img1} />
+                <p className={style.bold}>{currentStep.text1}</p>
+                <p className={style.text}>{currentStep.extra1}</p>
+              </div>
+              <div>
+                <img className={style.option_image} src={currentStep.img2} />
+                <p className={style.bold}>{currentStep.text2}</p>
+                <p className={style.text}>{currentStep.extra1}</p>
+              </div>
+              <div>
+                <img className={style.option_image} src={currentStep.img3} />
+                <p className={style.bold}>{currentStep.text3}</p>
+                <p className={style.text}>{currentStep.extra1}</p>
+              </div>
+            </div>
           </div>
-          <p className={style.text}>{currentStep.text1}</p>
-          <p className={style.text}>{currentStep.text2}</p>
-          <p className={style.text}>{currentStep.text3}</p>
           <NavLink className={style.button_container} exact strict to="/step3">
             <img src="/assets/buttons/arrow_white.svg" />
           </NavLink>

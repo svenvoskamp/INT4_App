@@ -20,22 +20,26 @@ const Step6 = () => {
   return (
     <>
       <div className = {`container container_een_6_${type}`}>
-        <NavLink exact strict to="/step5">
-          <img src="/assets/buttons/back_white.svg" />
-        </NavLink>
+        <div className="navigation">
+          <div className="navigation_back">
+          <NavLink  exact strict to="/step5">
+            <img src="/assets/buttons/back_white.svg" />
+          </NavLink>
+          </div>
+          <div className="navigation_quit">
+            <NavLink exact strict to="/dashboard">
+              <img src="/assets/buttons/quit_white.svg" />
+            </NavLink>
+          </div>
+        </div>
         <div className={style.content}>
           <div className={style.part}>
             <div className={style.header}>
               <h1 className={style.header_title}>{currentStep.title}</h1>
-              <div className={style.header_subtitle}>
-                <div className={style.line}></div>
-                <p className={style.subtitle}>"{currentStep.tagline}"</p>
-              </div> 
             </div>
-          </div>
-          <p>{currentStep.text1}</p>
-          <div className={style.button_container}>
+            <div className={style.button_container}>
           <button className={style.button} onClick = {handleOnClick}>Terug naar overzicht</button>
+          </div>
           </div>
         </div>
       </div>

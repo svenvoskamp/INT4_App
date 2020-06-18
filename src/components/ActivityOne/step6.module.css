@@ -11,7 +11,10 @@
 }
 
 .header {
+    width: 70%;
+    margin: 0 auto;
     text-align: center;
+    margin-top: 15rem;
 }
 
 .header_title {

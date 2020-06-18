@@ -6,6 +6,7 @@
   color: white;
   text-decoration: none;
   font-size: 4rem;
+  line-height: 1.6;
 }
 
 .subtitle {
@@ -19,11 +20,18 @@
 }
 
 .text {
-  font-family: montserrat, sans-serif;
+  font-family: 'Montserrat Alternates', sans-serif;
   font-weight: 300;
   font-size: 2.2rem;
   color: white;
-  padding-bottom: .5rem;
+  line-height: 1.4;
+}
+
+.textBold {
+  font-family: 'Montserrat Alternates', sans-serif;
+  font-weight: 800;
+  font-size: 2.2rem;
+  color: white;
   line-height: 1.4;
 }
 
@@ -36,31 +44,31 @@
 
 .buttonWhite {
   font-family: montserrat-medium, sans-serif;
-  font-size: 1.6rem;
+  font-size: 1.8rem;
   color: backgroundColor;
 }
 
 .buttonOrange {
   font-family: montserrat-medium, sans-serif;
-  font-size: 1.6rem;
+  font-size: 1.8rem;
   color: backgroundColor;
 }
 
 .buttonPurple {
   font-family: montserrat-medium, sans-serif;
-  font-size: 1.6rem;
+  font-size: 1.8rem;
   color: #47054A;
 }
 
 .buttonBlue {
   font-family: montserrat-medium, sans-serif;
-  font-size: 1.6rem;
+  font-size: 1.8rem;
   color: #04476B;
 }
 
 .buttonOrange {
   font-family: montserrat-medium, sans-serif;
-  font-size: 1.6rem;
+  font-size: 1.8rem;
   color: #D26247;
 }
 

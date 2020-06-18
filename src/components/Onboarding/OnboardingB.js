@@ -7,12 +7,16 @@ const OnboardingB = () => {
   return (
     <>
       <div className= "container onboarding onboardingb">
+        <div className="navigation">
+          <div className="menu">
+            <img className="menu_item" src="/assets/buttons/service_onboarding.svg" />
+          </div>
+        </div>
         <div className={style.content}>
           <div className={style.part}>
             <div className={style.header}>
               <h1 className={style.header_title}>Service gewenst?</h1>
               <div className={style.header_subtitle}>
-                <div className={style.line}></div>
                 <p className={style.subtitle}>“Wanneer jullie drinken of eten wensen te bestellen kunnen jullie op volgend embleem klikken bovenaan. 2 minuten later zullen we aan de deur kloppen om jullie verzoek aan te horen”</p>
               </div>
             </div>
