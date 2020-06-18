@@ -57,7 +57,7 @@ const OnboardingA = () => {
               </>
               }
             </video>
-          <NavLink className={style.button_container}  exact strict to="/dashboard">
+          <NavLink className={style.button_container}  exact strict to="/onboardingb">
           <p className={style.button}>Wij zijn er klaar voor</p>
           </NavLink>
         </div>

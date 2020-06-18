@@ -8,7 +8,7 @@ const OnboardingB = () => {
 
   return (
     <>
-      <p>Onboarding : Service gewenst </p>
+      <p>Onboarding : Niet Storen </p>
       <NavLink   exact strict to="/onboardingc">
           <p>Wij zijn er klaar voor</p>
       </NavLink>
