@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-
 import { useStores } from "../../hooks/index";
 import { useHistory, NavLink } from "react-router-dom";
 import { ROUTES } from "../../consts";
+import style from "./step6.module.css";
 
 const Step6 = () => {
   const history = useHistory();

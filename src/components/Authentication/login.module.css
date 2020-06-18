@@ -72,21 +72,7 @@
 }
 
 .button_google {
-    background-image: url(/assets/buttons/button_red.svg);
-    background-color: transparent;
-    border: none;
-    background-repeat: no-repeat;
-    display: inline-block;
-    background-size: 100% 100%;
-    padding: 1.5rem 3rem;
-    background-position: 50% 50%;
-    composes: button from "../../style/typo.module.css";
-    overflow: visible;
-    cursor: pointer;
-    transition: all .3s;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    composes: buttonRed from "../../style/buttons.module.css";
 }
 
 .form_register {

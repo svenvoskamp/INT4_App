@@ -21,7 +21,7 @@
   background-size: 100% 100%;
   padding: 1.5rem 3rem;
   background-position: 50% 50%;
-  composes: button from "../style/typo.module.css";
+  composes: buttonWhite from "../style/typo.module.css";
   overflow: visible;
   cursor: pointer;
   transition: all .3s;
@@ -38,7 +38,58 @@
   background-size: 100% 100%;
   padding: 1.5rem 3rem;
   background-position: 50% 50%;
-  composes: button from "../style/typo.module.css";
+  composes: buttonWhite from "../style/typo.module.css";
+  overflow: visible;
+  cursor: pointer;
+  transition: all .3s;
+  align-items: center;
+  justify-content: center;
+}
+
+.buttonCulture {
+  background-image: url(/assets/buttons/button_white.svg);
+  background-color: transparent;
+  border: none;
+  background-repeat: no-repeat;
+  display: inline-block;
+  background-size: 100% 100%;
+  padding: 1.5rem 3rem;
+  background-position: 50% 50%;
+  composes: buttonOrange from "../style/typo.module.css";
+  overflow: visible;
+  cursor: pointer;
+  transition: all .3s;
+  align-items: center;
+  justify-content: center;
+}
+
+.buttonRelax{
+  background-image: url(/assets/buttons/button_white.svg);
+  background-color: transparent;
+  border: none;
+  background-repeat: no-repeat;
+  display: inline-block;
+  background-size: 100% 100%;
+  padding: 1.5rem 3rem;
+  background-position: 50% 50%;
+  composes: buttonBlue from "../style/typo.module.css";
+  overflow: visible;
+  cursor: pointer;
+  transition: all .3s;
+  align-items: center;
+  justify-content: center;
+}
+
+.buttonAdventure{
+  background-image: url(/assets/buttons/button_white.svg);
+  background-color: transparent;
+  border: none;
+  background-repeat: no-repeat;
+  display: inline-block;
+  background-size: 100% 100%;
+  padding: 1.5rem 3rem;
+  background-position: 50% 50%;
+  composes: buttonPurple from "../style/typo.module.css";
   overflow: visible;
   cursor: pointer;
   transition: all .3s;

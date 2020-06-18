@@ -30,10 +30,34 @@
   color: blackColor;
 }
 
-.button {
+.buttonWhite {
   font-family: montserrat-medium, sans-serif;
   font-size: 1.6rem;
   color: backgroundColor;
+}
+
+.buttonOrange {
+  font-family: montserrat-medium, sans-serif;
+  font-size: 1.6rem;
+  color: backgroundColor;
+}
+
+.buttonPurple {
+  font-family: montserrat-medium, sans-serif;
+  font-size: 1.6rem;
+  color: #47054A;
+}
+
+.buttonBlue {
+  font-family: montserrat-medium, sans-serif;
+  font-size: 1.6rem;
+  color: #04476B;
+}
+
+.buttonOrange {
+  font-family: montserrat-medium, sans-serif;
+  font-size: 1.6rem;
+  color: #D26247;
 }
 
 .error {

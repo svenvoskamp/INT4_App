@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-
 import { useStores } from "../../hooks/index";
 import { useHistory, NavLink } from "react-router-dom";
+import style from "./step2.module.css";
 
 const Step2 = () => {
   const { uiStore, stepStore} = useStores();
