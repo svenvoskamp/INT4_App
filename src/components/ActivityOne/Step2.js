@@ -49,12 +49,12 @@ const Step2 = () => {
               <div>
                 <img className={style.option_image} src={currentStep.img2} />
                 <p className={style.bold}>{currentStep.text2}</p>
-                <p className={style.text}>{currentStep.extra1}</p>
+                <p className={style.text}>{currentStep.extra2}</p>
               </div>
               <div>
                 <img className={style.option_image} src={currentStep.img3} />
                 <p className={style.bold}>{currentStep.text3}</p>
-                <p className={style.text}>{currentStep.extra1}</p>
+                <p className={style.text}>{currentStep.extra3}</p>
               </div>
             </div>
           </div>

@@ -11,7 +11,7 @@
 }
 
 .header {
-    text-align: left;
+    text-align: center;
     margin-bottom: 5rem;
 }
 
@@ -23,11 +23,11 @@
 .header_subtitle {
     composes: subtitle from "../../style/typo.module.css";
     margin-bottom: 1.5rem;
-    justify-content: left;
 }
 
 .subtitle {
     display: flex;
+    justify-content: center;
 }
 
 .subtitle:before {
@@ -38,14 +38,28 @@
     height: 3rem;
     width: 3rem;
     margin-right: 1rem;
-  }
+}
 
 .info {
-    width: 50%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 5rem;
+    text-align: center;
+}
+
+.option_image {
+    width: 80%;
+    height: auto;
+    padding-bottom: 2rem;
 }
 
 .text {
     composes: text from "../../style/typo.module.css";
+}
+
+.bold {
+    composes: textBold from "../../style/typo.module.css";
+    padding-bottom: 1rem;
 }
 
 .button_container {

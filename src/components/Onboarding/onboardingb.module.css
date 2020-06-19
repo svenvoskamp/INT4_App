@@ -12,7 +12,6 @@
 
 .part {
     display: flex;
-    align-items: center;
     height: 100%;
 }
 
@@ -33,13 +32,6 @@
     margin-bottom: 1.5rem;
     justify-content: center;
     color: blackColor;
-}
-
-.line {
-    width: 2rem;
-    height: .3rem;
-    background-color: blackColor;
-    margin-right: 1rem;
 }
 
 .video {

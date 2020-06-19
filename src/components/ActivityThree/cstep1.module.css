@@ -2,7 +2,7 @@
 @value primaryColor, blackColor from tokens;
 
 .content {
-    width: 50%;
+    width: 70%;
     grid-row: 2;
     display: flex;
     flex-direction: column;
@@ -10,50 +10,40 @@
     margin: 0 auto;
 }
 
-.part {
-    display: flex;
-    height: 100%;
-}
-
 .header {
+    width: 70%;
+    margin: 0 auto;
     text-align: center;
+    margin-top: 15rem;
 }
 
 .header_title {
     composes: title from "../../style/typo.module.css";
     margin-bottom: 1rem;
-    color: blackColor;
 }
 
 .header_subtitle {
     composes: subtitle from "../../style/typo.module.css";
-    display: flex;
-    align-items: center;
     margin-bottom: 1.5rem;
-    justify-content: center;
-    color: blackColor;
 }
 
-.onboard_flow {
+.subtitle {
     display: flex;
     justify-content: center;
-    flex-direction: column;
 }
 
-.flow {
-    margin: 0 auto;
-    padding-bottom: 2rem;
+.subtitle:before {
+    display: block;
+    content: ' ';
+    background-image: url('/assets/buttons/logo_halo.svg');
+    background-size: 3rem 3rem;
+    height: 3rem;
+    width: 3rem;
+    margin-right: 1rem;
 }
 
-.flow_icon {
-    padding: 0 1rem;
-}
-
-.video {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.text {
+    composes: text from "../../style/typo.module.css";
 }
 
 .button_container {
@@ -61,5 +51,5 @@
 }
 
 .button {
-    composes: buttonBlack from "../../style/buttons.module.css";
+    composes: buttonAdventure from "../../style/buttons.module.css";
 }

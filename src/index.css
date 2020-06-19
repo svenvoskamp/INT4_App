@@ -94,7 +94,7 @@ body {
   background-image: url(/assets/backgrounds/culture_1.webp);
 }
 
-.webp .dashboard_avontuurlijk {
+.webp .dashboard_relax {
   background-image: url(/assets/backgrounds/relax_1.webp);
 }
 
@@ -208,108 +208,94 @@ body {
 
 /* Dag 2 Stap 1 */
 
-.webp .container_een_1_avontuurlijk {
-  background-image:  url(/assets/images/d1_adventure_1.webp), url(/assets/backgrounds/adventure_6.webp);
-  background-size: 50% auto, cover;
-  background-position: bottom right, center;
+.webp .container_twee_1_avontuurlijk {
+  background-image: url(/assets/backgrounds/adventure_6.webp);
+  background-size: cover;
+  background-position:center;
 }
 
-.webp .container_een_1_cultuur {
-  background-image:  url(/assets/images/d1_culture_1.webp), url(/assets/backgrounds/culture_6.webp);
-  background-size: 50% auto, cover;
-  background-position: bottom right, center;
+.webp .container_twee_1_cultuur {
+  background-image: url(/assets/backgrounds/culture_6.webp);
+  background-size:  cover;
+  background-position:  center;
 }
 
-.webp .container_een_1_ontspanning {
-  background-image:  url(/assets/images/d1_lazy_1.webp), url(/assets/backgrounds/relax_6.webp);
-  background-size: 50% auto, cover;
-  background-position: bottom right, center;
+.webp .container_twee_1_ontspanning {
+  background-image:  url(/assets/backgrounds/relax_6.webp);
+  background-size: cover;
+  background-position: center;
 }
 
 /* Dag 2 Stap 2 */
 
-.webp .container_een_2_avontuurlijk {
-  background-image: url(/assets/backgrounds/adventure_3.webp);
+.webp .container_twee_2_avontuurlijk {
+  background-image: url(/assets/backgrounds/adventure_2.webp);
 }
 
-.webp .container_een_2_cultuur {
-  background-image: url(/assets/backgrounds/culture_3.webp);
+.webp .container_twee_2_cultuur {
+  background-image: url(/assets/backgrounds/culture_2.webp);
 }
 
-.webp .container_een_2_ontspanning {
-  background-image: url(/assets/backgrounds/relax_3.webp);
+.webp .container_twee_2_ontspanning {
+  background-image: url(/assets/backgrounds/relax_2.webp);
 }
 
 /* Dag 2 Stap 3 */
 
-.webp .container_een_3_avontuurlijk {
-  background-image:  url(/assets/images/d1_adventure_3.webp), url(/assets/backgrounds/adventure_4.webp);
-  background-size: 50% auto, cover;
-  background-position: bottom right, center;
+.webp .container_twee_3_avontuurlijk {
+  background-image: url(/assets/backgrounds/adventure_1.webp);
+  background-size: cover;
+  background-position: center;
 }
 
-.webp .container_een_3_cultuur {
-  background-image:  url(/assets/images/d1_culture_3.webp), url(/assets/backgrounds/culture_4.webp);
-  background-size: 45% auto, cover;
-  background-position: bottom right, center;
+.webp .container_twee_3_cultuur {
+  background-image: url(/assets/backgrounds/culture_1.webp);
+  background-size: cover;
+  background-position:  center;
 }
 
-.webp .container_een_3_ontspanning {
-  background-image:  url(/assets/images/d1_lazy_3.webp), url(/assets/backgrounds/relax_4.webp);
-  background-size: 50% auto, cover;
-  background-position: bottom right, center;
+.webp .container_twee_3_ontspanning {
+  background-image:  url(/assets/backgrounds/relax_1.webp);
+  background-size: cover;
+  background-position:center;
 }
 
 /* Dag 2 Stap 4 */
 
-.webp .container_een_4_avontuurlijk {
-  background-image:  url(/assets/images/d1_adventure_4.webp), url(/assets/backgrounds/adventure_5.webp);
-  background-size: 40% auto, cover;
-  background-position: bottom right, center;
+.webp .container_twee_4_avontuurlijk {
+  background-image: url(/assets/backgrounds/adventure_5.webp);
+  background-size:  cover;
+  background-position:  center;
 }
 
-.webp .container_een_4_cultuur {
-  background-image:  url(/assets/images/d1_culture_4.webp), url(/assets/backgrounds/culture_5.webp);
-  background-size: 40% auto, cover;
-  background-position: bottom right, center;
+.webp .container_twee_4_cultuur {
+  background-image: url(/assets/backgrounds/culture_5.webp);
+  background-size:  cover;
+  background-position:  center;
 }
 
-.webp .container_een_4_ontspanning {
-  background-image:  url(/assets/images/d1_lazy_4.webp), url(/assets/backgrounds/relax_5.webp);
-  background-size: 35% auto, cover;
-  background-position: bottom right, center;
+.webp .container_twee_4_ontspanning {
+  background-image: url(/assets/backgrounds/relax_5.webp);
+  background-size:  cover;
+  background-position: center;
 }
 
 /* Dag 2 Stap 5 */
 
-.webp .container_een_5_avontuurlijk {
-  background-image:  url(/assets/images/d1_adventure_5.webp), url(/assets/backgrounds/adventure_6.webp);
-  background-size: 40% auto, cover;
-  background-position: bottom right, center;
+.webp .container_twee_5_avontuurlijk {
+  background-image: url(/assets/backgrounds/adventure_6.webp);
+  background-size:  cover;
+  background-position: center;
 }
 
-.webp .container_een_5_cultuur {
-  background-image:  url(/assets/images/d1_culture_5.webp), url(/assets/backgrounds/culture_6.webp);
-  background-size: 35% auto, cover;
-  background-position: bottom right, center;
+.webp .container_twee_5_cultuur {
+  background-image: url(/assets/backgrounds/culture_6.webp);
+  background-size: cover;
+  background-position: center;
 }
 
-.webp .container_een_5_ontspanning {
-  background-image:  url(/assets/images/d1_lazy_5.webp), url(/assets/backgrounds/relax_6.webp);
-  background-size: 40% auto, cover;
-  background-position: bottom right, center;
-}
-
-/* Dag 2 Stap 6 */
-
-.webp .container_een_6_avontuurlijk {
-  background-image: url(/assets/backgrounds/adventure_7.webp);
-}
-
-.webp .container_een_6_cultuur {
-  background-image: url(/assets/backgrounds/culture_7.webp);
-}
-
-.webp .container_een_6_ontspanning {
-  background-image: url(/assets/backgrounds/relax_7.webp);
+.webp .container_twee_5_ontspanning {
+  background-image:url(/assets/backgrounds/relax_6.webp);
+  background-size:  cover;
+  background-position: center;
 }
