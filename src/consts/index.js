@@ -19,7 +19,6 @@ const ROUTES = {
   bstep5: "/bstep5",
   cstep1: "/cstep1",
   cstep2: "/cstep2",
-  cstep3: "/cstep3",
   end: "/end"
 
 };

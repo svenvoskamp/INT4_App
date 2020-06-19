@@ -22,7 +22,7 @@ import BStep5 from "../ActivityTwo/BStep5";
 
 import CStep1 from "../ActivityThree/CStep1";
 import CStep2 from "../ActivityThree/CStep2";
-import CStep3 from "../ActivityThree/CStep3";
+
 
 import End from "../End/End";
 import OnboardingA from "../Onboarding/OnboardingA";
@@ -225,16 +225,6 @@ const Authentication = () => {
         {
             uiStore.currentDay === 3  ? (
           <CStep2/>
-            ):
-            (
-              <Redirect to={ROUTES.dashboard}/>
-            )
-        }
-        </Route>
-        <Route exact path={ROUTES.cstep3}>
-        {
-            uiStore.currentDay === 3  ? (
-          <CStep3/>
             ):
             (
               <Redirect to={ROUTES.dashboard}/>
