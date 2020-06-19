@@ -1,0 +1,54 @@
+@value tokens: "../../style/tokens.module.css";
+@value primaryColor, blackColor from tokens;
+
+.content {
+    width: 70%;
+    grid-row: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 0 auto;
+}
+
+.header {
+    width: 70%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.header_title {
+    composes: title from "../../style/typo.module.css";
+    margin-bottom: 1rem;
+}
+
+.header_subtitle {
+    composes: subtitle from "../../style/typo.module.css";
+    margin-bottom: 1.5rem;
+}
+
+.subtitle {
+    display: flex;
+    justify-content: center;
+}
+
+.subtitle:before {
+    display: block;
+    content: ' ';
+    background-image: url('/assets/buttons/logo_halo.svg');
+    background-size: 3rem 3rem;
+    height: 3rem;
+    width: 3rem;
+    margin-right: 1rem;
+}
+
+.text {
+    composes: text from "../../style/typo.module.css";
+}
+
+.button_container {
+    text-align: center;
+}
+
+.button {
+    composes: buttonAdventure from "../../style/buttons.module.css";
+}

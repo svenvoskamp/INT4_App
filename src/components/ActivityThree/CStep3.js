@@ -2,9 +2,12 @@ import React, { useState } from "react";
 import { useStores } from "../../hooks/index";
 import { useHistory, NavLink } from "react-router-dom";
 import { ROUTES } from "../../consts";
+import style from "./cstep3.module.css";
 
 const CStep1 = () => {
-  const { uiStore} = useStores();
+  const { uiStore, stepStore, typeStore} = useStores();
+  const typeid = typeStore.getTypeById(uiStore.currentBooking.typeId);
+  const type = typeid.type.toLowerCase();
   const history = useHistory();
 
   const handleOnClick = () => {
@@ -15,12 +18,31 @@ const CStep1 = () => {
 
   return (
     <>
-    <h1>Dag 3 : Hercreer foto Stap 3 </h1>
-    <NavLink exact strict to="/cstep2">
-        <button>Ga terug</button>
-    </NavLink>
+      <div className = {`container container_twee_1_${type}`}>
+        <div className="navigation">
+          <div className="navigation_back">
+            <NavLink exact strict to="/cstep2">
+              <img src="/assets/buttons/back_white.svg" />
+            </NavLink>
+          </div>
+          <div className="navigation_quit">
+            <NavLink exact strict to="/dashboard">
+            <img src="/assets/buttons/quit_white.svg" />
+            </NavLink>
+          </div>
+        </div>
+        <div className={style.content}>
+          <div className={style.part}>
+            <div className={style.header}>
+              <h1 className={style.header_title}>De gerecreërde foto!</h1>
 
-    <button onClick = {handleOnClick}>Terug naar overzicht</button>
+            </div>
+          </div>
+        </div>
+        <div className={style.button_container}>
+        <button className={style.button} onClick = {handleOnClick}>Het zit erop!</button>
+          </div>
+      </div>
     </>
   );
 };
