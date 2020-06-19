@@ -5,20 +5,28 @@ import { useStores } from "../../hooks/index";
 import 'firebase/storage';
 import Webcam from "react-webcam";
 import style from "./cstep2.module.css";
+import { ROUTES } from "../../consts";
 
 
 const CStep2 = () => {
   const { uiStore, stepStore, typeStore} = useStores();
   const typeid = typeStore.getTypeById(uiStore.currentBooking.typeId);
   const type = typeid.type.toLowerCase();
+  const history = useHistory();
   const currentBooking = uiStore.currentBooking;
   const [imgSrc, setImgSrc] = useState("");
+  console.log(imgSrc);
   const videoConstraints = {
     width: 280,
     height: 120,
     facingMode: "user"
   };
-  
+
+  const handleOnClick = () => {
+    uiStore.setCurrentDay(4);
+    history.push(ROUTES.end);
+  }
+
   const webcamRef = useRef(null);
 
   const storageRef = firebase.storage().ref();
@@ -51,15 +59,19 @@ const CStep2 = () => {
         <div className={style.content}>
           <div className={style.part}>
             <div className={style.header}>
-              <h1 className={style.header_title}>Dag 3 : Hercreer foto Stap 2 </h1>
+            {imgSrc === "" && (
+              <h1 className={style.header_title}>Hercreëer jullie oude foto!</h1>
+            )}
+              {imgSrc && (
+               <h1 className={style.header_title}>Jullie zijn aardig veranderd!</h1>
+            )}
               <div className={style.header_subtitle}>
                 <p className={style.subtitle}>"Een foto zegt meer dan 1000 woorden"</p>
-              </div> 
+              </div>
             </div>
           </div>
           <div className={style.info}>
           <img id = "img" width = "300" height = "300" src = "" alt = ""/>
-          {imgSrc === "" && (
           <Webcam
               audio={false}
               height={120}
@@ -68,18 +80,26 @@ const CStep2 = () => {
               width={280}
               videoConstraints={videoConstraints}
             />
-          )}
-            <button onClick={capture}>Capture photo</button>
+            {imgSrc === "" && (
+            <button onClick={capture}>Maak de foto!</button>
+            )}
+            {imgSrc && (
+             <button onClick={capture}>Maak hem nog een keer!</button>
+            )}
             {imgSrc && (
               <img
                 src={imgSrc}
               />
             )}
           </div>
+
+        {imgSrc && (
+          <>
+         <p>Wij zullen jullie deze foto bezorgen na jullie reis!</p>
+         <button className={style.button} onClick = {handleOnClick}>Joejoe!</button>
+        </>
+        )}
         </div>
-          <NavLink className={style.button_container} exact strict to="/cstep3">
-            <img src="/assets/buttons/arrow_white.svg" />
-          </NavLink>
       </div>
     </>
   );
