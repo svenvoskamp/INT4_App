@@ -16,7 +16,7 @@
 
 .header_title {
     composes: title from "../../style/typo.module.css";
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
     color: blackColor;
 }
 
@@ -38,9 +38,25 @@
 
 .video {
     width: 100%;
+    margin: 0 auto;
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.onboard_flow {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.flow {
+    margin: 0 auto;
+    padding-bottom: 2rem;
+}
+
+.flow_icon {
+    padding: 0 1rem;
 }
 
 .button_container {

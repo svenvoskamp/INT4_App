@@ -22,9 +22,16 @@ const OnboardingC = () => {
               </div>
             </div>
           </div>
-          <NavLink className={style.button_container} exact strict to="/dashboard">
-            <img src="/assets/buttons/arrow_black.svg" />
-          </NavLink>
+          <div className={style.onboard_flow}>
+              <div className={style.flow}>
+                <img className={style.flow_icon} src="/assets/buttons/bol_full.svg" />
+                <img className={style.flow_icon} src="/assets/buttons/bol_full.svg" />
+                <img className={style.flow_icon} src="/assets/buttons/bol_full.svg" />
+              </div>
+              <NavLink className={style.button_container} exact strict to="/dashboard">
+                <img src="/assets/buttons/arrow_black.svg" />
+              </NavLink>
+            </div>
         </div>
       </div>
     </>

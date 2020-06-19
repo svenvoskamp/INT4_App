@@ -34,7 +34,7 @@ const OnboardingA = () => {
               </div>
             </div>
           </div>
-            <video className={style.video} width="500" height = "500"  loop playsInline autoPlay muted>
+            <video className={style.video} width="450" height = "450"  loop playsInline autoPlay muted>
               {type.type === "Ontspanning" &&
               <>
               <source src="../../assets/video/type_relax.webm" type="video/webm"/>
@@ -54,9 +54,18 @@ const OnboardingA = () => {
               </>
               }
             </video>
-            <NavLink className={style.button_container} exact strict to="/onboardingb">
-            <img src="/assets/buttons/arrow_black.svg" />
-          </NavLink>
+            <div>
+            <div className={style.onboard_flow}>
+              <div className={style.flow}>
+                <img className={style.flow_icon} src="/assets/buttons/bol_full.svg" />
+                <img className={style.flow_icon} src="/assets/buttons/bol_outline.svg" />
+                <img className={style.flow_icon} src="/assets/buttons/bol_outline.svg" />
+              </div>
+              <NavLink className={style.button_container} exact strict to="/onboardingb">
+                <img src="/assets/buttons/arrow_black.svg" />
+              </NavLink>
+            </div>
+          </div>
         </div>
       </div>
     </>

@@ -16,7 +16,7 @@
 
 .header_title {
     composes: title from "../../style/typo.module.css";
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
     color: blackColor;
 }
 

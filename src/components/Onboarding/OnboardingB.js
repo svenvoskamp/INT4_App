@@ -21,9 +21,16 @@ const OnboardingB = () => {
               </div>
             </div>
           </div>
+          <div className={style.onboard_flow}>
+            <div className={style.flow}>
+              <img className={style.flow_icon} src="/assets/buttons/bol_full.svg" />
+              <img className={style.flow_icon} src="/assets/buttons/bol_full.svg" />
+              <img className={style.flow_icon} src="/assets/buttons/bol_outline.svg" />
+            </div>
           <NavLink className={style.button_container} exact strict to="/onboardingc">
             <img src="/assets/buttons/arrow_black.svg" />
           </NavLink>
+          </div>
         </div>
       </div>
     </>

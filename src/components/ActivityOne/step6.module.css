@@ -19,22 +19,7 @@
 
 .header_title {
     composes: title from "../../style/typo.module.css";
-    margin-bottom: 2rem;
-}
-
-.header_subtitle {
-    composes: subtitle from "../../style/typo.module.css";
-    display: flex;
-    align-items: center;
-    margin-bottom: 1.5rem;
-    justify-content: center;
-}
-
-.line {
-    width: 2rem;
-    height: .3rem;
-    background-color: blackColor;
-    margin-right: 1rem;
+    margin-bottom: 1rem;
 }
 
 .text {

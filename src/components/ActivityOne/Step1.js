@@ -29,7 +29,6 @@ const Step1 = () => {
             <div className={style.header}>
               <h1 className={style.header_title}>{uiStore.currentBooking.name1} & {uiStore.currentBooking.name2}</h1>
               <div className={style.header_subtitle}>
-                <div className={style.line}></div>
                 <p className={style.subtitle}>"{currentStep.tagline}"</p>
               </div> 
             </div>

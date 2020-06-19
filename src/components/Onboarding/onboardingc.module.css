@@ -10,13 +10,19 @@
     margin: 0 auto;
 }
 
+.part {
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
 .header {
     text-align: center;
 }
 
 .header_title {
     composes: title from "../../style/typo.module.css";
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
     color: blackColor;
 }
 
@@ -29,11 +35,19 @@
     color: blackColor;
 }
 
-.line {
-    width: 2rem;
-    height: .3rem;
-    background-color: blackColor;
-    margin-right: 1rem;
+.onboard_flow {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.flow {
+    margin: 0 auto;
+    padding-bottom: 2rem;
+}
+
+.flow_icon {
+    padding: 0 1rem;
 }
 
 .video {

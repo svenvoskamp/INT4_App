@@ -21,7 +21,7 @@ const Welcome = () => {
               </div>
             </div>
           </div>
-            <video className={style.video} width="500" height = "500"  loop playsInline autoPlay muted>
+            <video className={style.video} width="450" height = "450"  loop playsInline autoPlay muted>
               {count >= 0 && count <= 14 &&
               <>
               <source src="/assets/video/ring_silver.webm" type="video/webm"/>
