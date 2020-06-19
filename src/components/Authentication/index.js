@@ -19,7 +19,6 @@ import BStep2 from "../ActivityTwo/BStep2";
 import BStep3 from "../ActivityTwo/BStep3";
 import BStep4 from "../ActivityTwo/BStep4";
 import BStep5 from "../ActivityTwo/BStep5";
-import BStep6 from "../ActivityTwo/BStep6";
 
 import CStep1 from "../ActivityThree/CStep1";
 import CStep2 from "../ActivityThree/CStep2";
@@ -206,16 +205,6 @@ const Authentication = () => {
         {
             stepStore.steps.length > 0 && uiStore.currentDay === 2  ? (
           <BStep5/>
-            ):
-            (
-              <Redirect to={ROUTES.dashboard}/>
-            )
-        }
-        </Route>
-        <Route exact path={ROUTES.bstep6}>
-        {
-            stepStore.steps.length > 0 && uiStore.currentDay === 2  ? (
-          <BStep6/>
             ):
             (
               <Redirect to={ROUTES.dashboard}/>

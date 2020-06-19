@@ -7,7 +7,7 @@ configure({
 
 class Step {
 
-  constructor({id = v4(), currentStep, title, tagline, img1, img2, img3, text1, text2, text3, extra1, extra2, extra3, activityId}) {
+  constructor({id = v4(), currentStep, title, tagline, img1, img2, img3, text1, text2, text3, extra1, extra2, extra3, extra4, extra5, extra6, activityId}) {
     this.id = id;
     this.currentStep = currentStep;
     this.tagline = tagline;
@@ -21,6 +21,9 @@ class Step {
     this.extra1 = extra1;
     this.extra2 = extra2;
     this.extra3 = extra3;
+    this.extra4 = extra4;
+    this.extra5 = extra5;
+    this.extra6 = extra6;
     this.activityId = activityId;
   }
 }
@@ -44,6 +47,9 @@ const stepConverter = {
       extra1: step.extra1,
       extra2: step.extra2,
       extra3: step.extra3,
+      extra4: step.extra4,
+      extra5: step.extra5,
+      extra6: step.extra6,
       activityId: step.activityId
     };
   },
@@ -63,6 +69,9 @@ const stepConverter = {
       extra1: data.extra1,
       extra2: data.extra2,
       extra3: data.extra3,
+      extra4: data.extra4,
+      extra5: data.extra5,
+      extra6: data.extra6,
       activityId: data.activityId
     });
   }

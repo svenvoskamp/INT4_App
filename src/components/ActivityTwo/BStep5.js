@@ -2,10 +2,19 @@ import React, { useState } from "react";
 
 import { useStores } from "../../hooks/index";
 import { useHistory, NavLink } from "react-router-dom";
+import { ROUTES } from "../../consts";
+
 
 const BStep5 = () => {
   const { uiStore, stepStore} = useStores();
   const currentStep = stepStore.getStepByCurrentStep(5);
+  const history = useHistory();
+
+  const handleOnClick = () => {
+    stepStore.empty();
+    uiStore.setCurrentDay(3);
+    history.push(ROUTES.dashboard);
+  }
 
   return (
     <>
@@ -14,9 +23,7 @@ const BStep5 = () => {
         <button>Ga terug</button>
     </NavLink>
 
-    <NavLink exact strict to="/bstep6">
-        <button>Ga naar stap 6</button>
-    </NavLink>
+    <button onClick = {handleOnClick}>Terug naar overzicht</button>
     </>
   );
 };
