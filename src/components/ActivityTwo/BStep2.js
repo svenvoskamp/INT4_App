@@ -12,7 +12,7 @@ const BStep2 = () => {
 
   return (
     <>
-      <div className = {`container container_twee_1_${type}`}>
+      <div className = {`container container_twee_2_${type}`}>
         <div className="navigation">
           <div className="navigation_back">
             <NavLink exact strict to="/bstep1">

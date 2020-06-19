@@ -21,11 +21,6 @@ const Step6 = () => {
     <>
       <div className = {`container container_een_6_${type}`}>
         <div className="navigation">
-          <div className="navigation_back">
-          <NavLink  exact strict to="/step5">
-            <img src="/assets/buttons/back_white.svg" />
-          </NavLink>
-          </div>
           <div className="navigation_quit">
             <NavLink exact strict to="/dashboard">
               <img src="/assets/buttons/quit_white.svg" />

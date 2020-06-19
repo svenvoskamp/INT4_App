@@ -32,10 +32,10 @@ const CStep1 = () => {
               </div> 
             </div>
           </div>
-        </div>
-        <NavLink className={style.button_container} exact strict to="/cstep2">
+          <NavLink className={style.button_container} exact strict to="/cstep2">
             <img src="/assets/buttons/arrow_white.svg" />
           </NavLink>
+        </div>
       </div>
     </>
   );

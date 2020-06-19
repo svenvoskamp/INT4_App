@@ -15,7 +15,6 @@ const CStep1 = () => {
     history.push(ROUTES.end);
   }
 
-
   return (
     <>
       <div className = {`container container_twee_1_${type}`}>

@@ -19,7 +19,7 @@
 
 .header_title {
     composes: title from "../../style/typo.module.css";
-    margin-bottom: 1rem;
+    margin: 1rem 0;
 }
 
 .header_subtitle {
@@ -30,16 +30,6 @@
 .subtitle {
     display: flex;
     justify-content: center;
-}
-
-.subtitle:before {
-    display: block;
-    content: ' ';
-    background-image: url('/assets/buttons/logo_halo.svg');
-    background-size: 3rem 3rem;
-    height: 3rem;
-    width: 3rem;
-    margin-right: 1rem;
 }
 
 .text {

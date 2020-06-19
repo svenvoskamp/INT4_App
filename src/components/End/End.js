@@ -3,16 +3,36 @@ import style from "./end.module.css";
 import { useStores } from "../../hooks/index";
 
 const End = () => {
-  const { uiStore, stepStore, typeStore} = useStores();
+  const { uiStore,stepStore,  countryStore, typeStore } = useStores();
   const typeid = typeStore.getTypeById(uiStore.currentBooking.typeId);
   const type = typeid.type.toLowerCase();
+  const booking = uiStore.currentBooking;
+  const country = countryStore.getCountryById(booking.countryId);
+  const typeReiziger = typeStore.getTypeById(booking.typeId);
+  const count = uiStore.currentBooking.count;
+  console.log(booking, type, country);
+  let journeyType;
+  if(typeReiziger.type === "Ontspanning"){
+    journeyType = "Jullie relax moment zit erop!";
+  }
+  if(typeReiziger.type === "Cultuur"){
+    journeyType = "Jullie culturele ervaring zit erop!";
+  }
+
+  if(typeReiziger.type === "Avontuurlijk"){
+    journeyType = "Jullie avontuur zit erop!";
+  }
 
   return (
     <div className = {`container container_twee_1_${type}`}>
     <div className={style.content}>
       <div className={style.part}>
         <div className={style.header}>
-          <h1 className={style.header_title}>The end</h1>
+          <img width="70" height="40" src="/assets/buttons/logo_halo.svg" />
+          <h1 className={style.header_title}>{journeyType}</h1>
+          <div className={style.header_subtitle}>
+                <p className={style.subtitle}>"Wij vonden het alvast een fantastische periode! Hopelijk hebben jullie er ook van genoten!"</p>
+              </div> 
           </div> 
         </div>
       </div>

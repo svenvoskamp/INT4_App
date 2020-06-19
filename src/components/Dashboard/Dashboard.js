@@ -36,7 +36,10 @@ const Dashboard = () => {
             </div>
             <div className={style.info}>
               {currentDayActivities.map(activity => (
-                <img className={style.option_image} src = {activity.img} alt ="activity"/>
+                <picture className={style.option_image} key={activity.id}>
+                <source className={style.option_image} type="image/webp" srcSet={`${activity.img}.webp`}/>
+                <img className={style.option_image} src={`${activity.img}.png`} alt="activity"/>
+              </picture>
               ))
               }
             </div>

@@ -42,17 +42,26 @@ const Step2 = () => {
             </div>
             <div className={style.info}>
               <div>
-                <img className={style.option_image} src={currentStep.img1} />
+                <picture>
+                  <source className={style.option_image} type="image/webp" srcSet={`${currentStep.img1}.webp`}/>
+                  <img className={style.option_image} src={`${currentStep.img1}.png`} alt="married couple"/>
+                </picture>
                 <p className={style.bold}>{currentStep.text1}</p>
                 <p className={style.text}>{currentStep.extra1}</p>
               </div>
               <div>
-                <img className={style.option_image} src={currentStep.img2} />
+              <picture>
+                  <source className={style.option_image} type="image/webp" srcSet={`${currentStep.img2}.webp`}/>
+                  <img className={style.option_image} src={`${currentStep.img2}.png`} alt="married couple"/>
+                </picture>
                 <p className={style.bold}>{currentStep.text2}</p>
                 <p className={style.text}>{currentStep.extra2}</p>
               </div>
               <div>
-                <img className={style.option_image} src={currentStep.img3} />
+                <picture>
+                  <source className={style.option_image} type="image/webp" srcSet={`${currentStep.img3}.webp`}/>
+                  <img className={style.option_image} src={`${currentStep.img3}.png`} alt="married couple"/>
+                </picture>
                 <p className={style.bold}>{currentStep.text3}</p>
                 <p className={style.text}>{currentStep.extra3}</p>
               </div>
