@@ -15,12 +15,19 @@ const CStep2 = () => {
   const history = useHistory();
   const currentBooking = uiStore.currentBooking;
   const [imgSrc, setImgSrc] = useState("");
+  const [makePic, setMakePic] = useState(false);
+  const [text, setText] =useState("Een foto zegt meer dan 1000 woorden");
   console.log(imgSrc);
   const videoConstraints = {
-    width: 280,
-    height: 120,
+    width: 300,
+    height: 400,
     facingMode: "user"
   };
+
+  const startPhoto = () => {
+    setMakePic(true);
+  }
+
 
   const handleOnClick = () => {
     uiStore.setCurrentDay(4);
@@ -38,6 +45,8 @@ const CStep2 = () => {
     () => {
       const imageSrc = webcamRef.current.getScreenshot();
       setImgSrc(imageSrc);
+      setMakePic(false);
+      setText("Wij zullen jullie deze foto later opsturen");
     },
     [webcamRef]
   );
@@ -66,7 +75,7 @@ const CStep2 = () => {
                <h1 className={style.header_title}>Jullie zijn aardig veranderd!</h1>
             )}
               <div className={style.header_subtitle}>
-                <p className={style.subtitle}>"Een foto zegt meer dan 1000 woorden"</p>
+                <p className={style.subtitle}>{text}</p>
               </div>
             </div>
           </div>
@@ -76,12 +85,14 @@ const CStep2 = () => {
               <img className={style.content_polaroid} src="/assets/images/polaroid_left.png" alt="polaroid" />
             </div>
             <div>
-              <Webcam className={style.polaroid_wabcam} audio={false} height={200} ref={webcamRef} screenshotFormat="image/jpeg" width={200} videoConstraints={videoConstraints} />
-              {imgSrc === "" && (
+              {makePic === true && (
+                <>
+              <Webcam className={style.polaroid_wabcam} audio={false} height={400} ref={webcamRef} screenshotFormat="image/jpeg" width={200} videoConstraints={videoConstraints} />
               <button onClick={capture}>Maak de foto!</button>
+              </>
               )}
-              {imgSrc && (
-              <button onClick={capture}>Maak hem nog een keer!</button>
+              {makePic === false && (
+              <button onClick = {startPhoto}>WIj willen de foto hercreeren</button>
               )}
             </div>
             <div className={style.polaroid_container}>
@@ -92,15 +103,8 @@ const CStep2 = () => {
             </div>
           </div>
           <div className={style.button_container}>
-            {imgSrc === "" && (
-              <div>
-              <p>Wij zullen jullie deze foto bezorgen na jullie reis!</p>
-              <button className={style.button}>Maak eerst een foto</button>
-            </div>
-              )}
             {imgSrc && (
               <div>
-                <p>Wij zullen jullie deze foto bezorgen na jullie reis!</p>
                 <button className={style.button} onClick = {handleOnClick}>Perfect!</button>
               </div>
             )}

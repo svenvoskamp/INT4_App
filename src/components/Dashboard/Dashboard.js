@@ -17,6 +17,11 @@ const Dashboard = () => {
   console.log(activeCurrentDayActivity);
   stepStore.getStepsForActivity(activeCurrentDayActivity.id);
 
+  const handleNextDay = () => {
+    stepStore.empty();
+    uiStore.setCurrentDay(uiStore.currentDay + 1);
+  }
+
   return (
     <>
       <div className = {`dashboard`}>
@@ -45,6 +50,16 @@ const Dashboard = () => {
               </svg>
               <p>Service</p>
             </div>
+            {day === 1 && (
+            <div>
+              <button onClick = {handleNextDay}>Naar volgende dag</button>
+            </div>
+            )}
+             {day === 2 && (
+            <div>
+              <button onClick = {handleNextDay}>Naar volgende dag</button>
+            </div>
+            )}
           </div>
           <div className={style.button_container}>
             {day === 1 &&

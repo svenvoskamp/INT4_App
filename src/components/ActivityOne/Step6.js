@@ -12,8 +12,6 @@ const Step6 = () => {
   const currentStep = stepStore.getStepByCurrentStep(6);
 
   const handleOnClick = () => {
-    stepStore.empty();
-    uiStore.setCurrentDay(2);
     history.push(ROUTES.dashboard);
   }
 

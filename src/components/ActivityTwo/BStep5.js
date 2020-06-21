@@ -13,8 +13,6 @@ const BStep5 = () => {
   const history = useHistory();
 
   const handleOnClick = () => {
-    stepStore.empty();
-    uiStore.setCurrentDay(3);
     history.push(ROUTES.dashboard);
   }
 

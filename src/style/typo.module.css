@@ -1,5 +1,5 @@
 @value tokens: "./tokens.module.css";
-@value blackColor, backgroundColor from tokens;
+@value blackColor, backgroundColor, primaryColor from tokens;
 
 .title {
   font-family: bely-display, serif;
