@@ -45,6 +45,38 @@
     composes: text from "../../style/typo.module.css";
 }
 
+.info {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.polaroid_container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.content_polaroid {
+    position: absolute;
+    overflow: hidden;
+    width: 40rem;
+    height: 40rem;
+}
+
+.polaroid_image_right {
+    width: 30rem;
+    height: 29rem;
+    object-fit: cover;
+    transform: rotate(7deg);
+}
+
+.polaroid_image_left {
+    width: 30rem;
+    height: 29rem;
+    object-fit: cover;
+    transform: rotate(-7deg);
+}
+
 .button_container {
     text-align: center;
 }

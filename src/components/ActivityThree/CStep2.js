@@ -71,34 +71,40 @@ const CStep2 = () => {
             </div>
           </div>
           <div className={style.info}>
-          <img id = "img" width = "300" height = "300" src = "" alt = ""/>
-          <Webcam
-              audio={false}
-              height={120}
-              ref={webcamRef}
-              screenshotFormat="image/jpeg"
-              width={280}
-              videoConstraints={videoConstraints}
-            />
+            <div className={style.polaroid_container}>
+              <img id = "img" className = {style.polaroid_image_left} src = "" alt = ""/>
+              <img className={style.content_polaroid} src="/assets/images/polaroid_left.png" alt="polaroid" />
+            </div>
+            <div>
+              <Webcam className={style.polaroid_wabcam} audio={false} height={200} ref={webcamRef} screenshotFormat="image/jpeg" width={200} videoConstraints={videoConstraints} />
+              {imgSrc === "" && (
+              <button onClick={capture}>Maak de foto!</button>
+              )}
+              {imgSrc && (
+              <button onClick={capture}>Maak hem nog een keer!</button>
+              )}
+            </div>
+            <div className={style.polaroid_container}>
+              {imgSrc && (
+                <img src={imgSrc} className = {style.polaroid_image_right} />
+              )}
+              <img className={style.content_polaroid} src="/assets/images/polaroid_right.png" alt="polaroid" />
+            </div>
+          </div>
+          <div className={style.button_container}>
             {imgSrc === "" && (
-            <button onClick={capture}>Maak de foto!</button>
-            )}
+              <div>
+              <p>Wij zullen jullie deze foto bezorgen na jullie reis!</p>
+              <button className={style.button}>Maak eerst een foto</button>
+            </div>
+              )}
             {imgSrc && (
-             <button onClick={capture}>Maak hem nog een keer!</button>
-            )}
-            {imgSrc && (
-              <img
-                src={imgSrc}
-              />
+              <div>
+                <p>Wij zullen jullie deze foto bezorgen na jullie reis!</p>
+                <button className={style.button} onClick = {handleOnClick}>Perfect!</button>
+              </div>
             )}
           </div>
-
-        {imgSrc && (
-          <>
-         <p>Wij zullen jullie deze foto bezorgen na jullie reis!</p>
-         <button className={style.button} onClick = {handleOnClick}>Joejoe!</button>
-        </>
-        )}
         </div>
       </div>
     </>

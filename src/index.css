@@ -29,6 +29,15 @@ body {
   background-size: cover;
 }
 
+.dashboard{
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 .welcome {
   width: 100%;
   display: grid;
@@ -102,29 +111,17 @@ body {
 
 /* Dashboard */
 
-.webp .dashboard_avontuurlijk {
-  background-image: url(/assets/backgrounds/adventure_1.webp);
+.webp .dashboard {
+  background-image: url(/assets/backgrounds/dashboard_left.png), url(/assets/backgrounds/dashboard_background.webp);
+  background-position: left center, auto;
+  background-size: auto 100%, cover;
 }
 
-.no-webp .dashboard_avontuurlijk {
-  background-image: url(/assets/backgrounds/adventure_1.jpg);
+.no-webp .dashboard {
+  background-image: url(/assets/backgrounds/dashboard_left.png), url(/assets/backgrounds/dashboard_background.png);
+  background-size: left, cover;
 }
 
-.webp .dashboard_cultuur {
-  background-image: url(/assets/backgrounds/culture_1.webp);
-}
-
-.no-webp .dashboard_cultuur {
-  background-image: url(/assets/backgrounds/culture_1.jpg);
-}
-
-.webp .dashboard_ontspanning {
-  background-image: url(/assets/backgrounds/relax_1.webp);
-}
-
-.no-webp .dashboard_ontspanning {
-  background-image: url(/assets/backgrounds/relax_1.jpg);
-}
 
 /* Dag 1 Stap 1 */
 

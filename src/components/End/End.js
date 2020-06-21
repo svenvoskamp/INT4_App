@@ -13,7 +13,7 @@ const End = () => {
   console.log(booking, type, country);
   let journeyType;
   if(typeReiziger.type === "Ontspanning"){
-    journeyType = "Jullie relax moment zit erop!";
+    journeyType = "Jullie relax-moment zit erop!";
   }
   if(typeReiziger.type === "Cultuur"){
     journeyType = "Jullie culturele ervaring zit erop!";
