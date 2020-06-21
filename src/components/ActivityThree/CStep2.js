@@ -18,11 +18,6 @@ const CStep2 = () => {
   const [makePic, setMakePic] = useState(false);
   const [text, setText] =useState("Een foto zegt meer dan 1000 woorden");
   console.log(imgSrc);
-  const videoConstraints = {
-    width: 300,
-    height: 400,
-    facingMode: "user"
-  };
 
   const startPhoto = () => {
     setMakePic(true);
@@ -84,13 +79,17 @@ const CStep2 = () => {
               <img id = "img" className = {style.polaroid_image_left} src = "" alt = ""/>
               <img className={style.content_polaroid} src="/assets/images/polaroid_left.png" alt="polaroid" />
             </div>
-            <div>
+            <div className={style.camera_container}>
               {makePic === true && (
                 <>
-              <Webcam className={style.polaroid_wabcam} audio={false} height={400} ref={webcamRef} screenshotFormat="image/jpeg" width={200} videoConstraints={videoConstraints} />
-              <button onClick={capture}>Maak de foto!</button>
+              <Webcam className={style.camera} audio={false} height={1024} ref={webcamRef} screenshotFormat="image/jpeg" width={1366}  />
+              <div className={style.camera_button_container}>
+                <img src="/assets/images/camera_button.svg" className={style.test} onClick={capture} />
+              </div>
               </>
               )}
+            </div>
+            <div>
               {makePic === false && (
               <button onClick = {startPhoto}>WIj willen de foto hercreeren</button>
               )}
@@ -105,7 +104,7 @@ const CStep2 = () => {
           <div className={style.button_container}>
             {imgSrc && (
               <div>
-                <button className={style.button} onClick = {handleOnClick}>Perfect!</button>
+                <button className={`${type === "ontspanning" ? style.button_ontspanning : type === "avontuurlijk" ? style.button_adventure : type === "cultuur" ? style.button_cultuur : ""}`} onClick = {handleOnClick}>Perfect!</button>
               </div>
             )}
           </div>

@@ -4,9 +4,17 @@
 .content {
 }
 
+.part {
+    padding: 5rem 0 5rem 3rem;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
 .header {
+    height: 100%;
     margin-bottom: 3rem;
-    padding: 5rem 0 5rem 5rem;
 }
 
 .header_profile {
@@ -19,31 +27,44 @@
     padding-right: 1rem;
 }
 
-.header_title {
+.title_purple {
     composes: title from "../../style/typo.module.css";
-    color: blackColor;
+    color: #430D34;
+}
+
+.title_blue {
+    composes: title from "../../style/typo.module.css";
+    color: #103F66;
+}
+
+.title_orange {
+    composes: title from "../../style/typo.module.css";
+    color: #D05B3F;
 }
 
 .header_subtitle {
     composes: subtitle from "../../style/typo.module.css";
     display: flex;
     align-items: center;
-    margin-bottom: 1.5rem;
+    margin-bottom: 10rem;
     color: blackColor;
 }
 
-.line {
-    width: 2rem;
-    height: .3rem;
-    background-color: white;
-    margin-right: 1rem;
+.bold {
+    font-weight: 600;
+}
+
+.options {
+    display: flex;
+    align-items: center;
+    margin: 3rem 0;
 }
 
 .info {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     text-align: center;
-    height: 90%;
+    height: 80%;
     align-self: center;
 }
 
@@ -52,15 +73,20 @@
     height: auto;
 }
 
-.option_image:first-child{
+.option_text {
+    composes: normal from "../../style/typo.module.css";
+    padding-left: 1rem;
+}
+
+.activity:first-child{
     align-self: flex-end;
 }
 
-.option_image:nth-child(2){
+.activity:nth-child(2){
     align-self: flex-start;
 }
 
-.option_image:nth-child(3){
+.activity:nth-child(3){
     align-self: center;
 }
 
@@ -75,6 +101,29 @@
     text-align: center;
 }
 
-.button {
-    composes: buttonAdventure from "../../style/buttons.module.css";
+.button_ontspanning {
+    composes: buttonBlue from "../../style/buttons.module.css";
+}
+
+.button_cultuur {
+    composes: buttonOrange from "../../style/buttons.module.css";
+}
+
+.button_avontuur {
+    composes: buttonPurple from "../../style/buttons.module.css";
+}
+
+.next_container {
+}
+
+.next_flex {
+    display: flex;
+    align-items: center;
+}
+
+.next {
+    composes: normal from "../../style/typo.module.css";
+    font-style: italic;
+    font-size: 1.6rem;
+    padding-right: .5rem;
 }
