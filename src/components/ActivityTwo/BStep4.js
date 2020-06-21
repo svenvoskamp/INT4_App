@@ -26,11 +26,10 @@ const BStep4 = () => {
           </div>
         </div>
         <div className={style.content}>
-          <div className={style.part}>
-            <div className={style.header}>
-              <h1 className={style.header_title}>{currentStep.title}</h1>
-            </div>
-          </div>
+        <audio controls >
+          <source src={currentStep.ogg} type="audio/ogg"/>
+          <source src={currentStep.mp3} type="audio/mpeg"/>
+        </audio>
           <NavLink className={style.button_container} exact strict to="/bstep5">
             <img src="/assets/buttons/arrow_white.svg" />
           </NavLink>
