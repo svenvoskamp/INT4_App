@@ -108,7 +108,7 @@
     text-align: center;
 }
 
-.button_adventure {
+.button_avontuur {
     composes: buttonAdventure from "../../style/buttons.module.css";
 }
 

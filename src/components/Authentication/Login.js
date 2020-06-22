@@ -18,10 +18,6 @@ const Login = () => {
       console.log(result);
     };
 
-    const handleLogOut = async e => {
-      e.preventDefault();
-        await uiStore.logoutUser();
-    };
 
     const handleSubmit = async e => {
       setPasswordError("");
@@ -43,6 +39,9 @@ const Login = () => {
      const result = await uiStore.signInWithEmailAndPassword(user);
      if(result === "auth/user-not-found" || result === "auth/invalid"){
        setFormError("De inloggegevens zijn onjuist");
+     }
+     if(uiStore.currentUser && !uiStore.currentBooking){
+       setFormError("Gelieve een boeking te doen voor dit account op onze website");
      }
   };
 
@@ -71,9 +70,6 @@ const Login = () => {
                   </div>
                   <div className={style.button_container}>
                     <p className={style.form_error}>{formError}</p>
-                    {uiStore.currentUser && !uiStore.currentBooking && (
-                       <p className={style.form_error}>Gelieve een boeking te maken voor dit account op onze site!</p>
-                    )}
                     <input className={style.button} type="submit" value="Login"/>
                   </div>
                 </form>

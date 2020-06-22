@@ -9,9 +9,11 @@ const Step6 = () => {
   const { uiStore, stepStore, typeStore} = useStores();
   const typeid = typeStore.getTypeById(uiStore.currentBooking.typeId);
   const type = typeid.type.toLowerCase();
+  console.log(type);
   const currentStep = stepStore.getStepByCurrentStep(6);
 
   const handleOnClick = () => {
+    uiStore.setActivityOneDone();
     history.push(ROUTES.dashboard);
   }
 
