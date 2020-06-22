@@ -26,7 +26,7 @@ const BStep4 = () => {
           </div>
         </div>
         <div className={style.content}>
-        <audio controls >
+        <audio className={style.audio} controls >
           <source src={currentStep.ogg} type="audio/ogg"/>
           <source src={currentStep.mp3} type="audio/mpeg"/>
         </audio>
