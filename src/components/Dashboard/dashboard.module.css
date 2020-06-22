@@ -65,7 +65,7 @@
     grid-template-columns: 1fr 1fr 2fr;
     grid-template-rows: 1fr 1fr ;
     grid-column-gap: 3rem;
-    grid-template-areas: 
+    grid-template-areas:
     "two two three"
     "one one three";
     height: 90%;
@@ -118,6 +118,13 @@
 .option_text {
     composes: normal from "../../style/typo.module.css";
     padding-left: 1rem;
+}
+
+.option_text_bold {
+
+  font-weight: 500;
+  composes: normal from "../../style/typo.module.css";
+  padding-left: 1rem;
 }
 
 .video {

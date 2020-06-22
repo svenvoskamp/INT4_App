@@ -41,7 +41,7 @@ const Login = () => {
         password: password
       });
      const result = await uiStore.signInWithEmailAndPassword(user);
-     if(result === "auth/user-not-found" || "auth/invalid"){
+     if(result === "auth/user-not-found" || result === "auth/invalid"){
        setFormError("De inloggegevens zijn onjuist");
      }
   };
@@ -59,7 +59,7 @@ const Login = () => {
                 <input className={style.button_google} type="submit" value="Login met Google"/>
               </form>
               <p className={style.form_option}>OF</p>
-              <div> 
+              <div>
                 <form onSubmit={handleSubmit}>
                   <div className={style.input_container}>
                     <p className={style.input_text}>E-mail</p> <p className={style.form_error}>{emailError}</p>
