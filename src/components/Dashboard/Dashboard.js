@@ -387,13 +387,27 @@ const Dashboard = () => {
             </div>
           </div>
         </div>
-        <div className={style.info}>
-                <div className={style.activity}>
-                  <picture className={style.option_image} >
-                    <source className={style.option_image} type="image/webp" srcSet="/assets/images/polaroid.webp"/>
-                    <img className={style.option_image} src="assets/images/polaroid.png" alt="activity"/>
-                  </picture>
-                  <div className={style.button_container}>
+        <div className={style.info_polaroid}>
+                <div className={style.polaroid}>
+                  {type.type === "Ontspanning" && (
+                      <picture className={style.option_image} >
+                      <source className={style.option_image} type="image/webp" srcSet="/assets/images/d3_lazy.webp"/>
+                      <img className={style.option_image} src="assets/images/d3_lazy.png" alt="activity"/>
+                    </picture>
+                  )}
+                  {type.type === "Cultuur" && (
+                      <picture className={style.option_image} >
+                      <source className={style.option_image} type="image/webp" srcSet="/assets/images/d3_culture.webp"/>
+                      <img className={style.option_image} src="assets/images/d3_culture.png" alt="activity"/>
+                    </picture>
+                  )}
+                  {type.type === "Avontuurlijk" && (
+                      <picture className={style.option_image} >
+                      <source className={style.option_image} type="image/webp" srcSet="/assets/images/d3_adventure.webp"/>
+                      <img className={style.option_image} src="assets/images/d3_adventure.png" alt="activity"/>
+                    </picture>
+                  )}
+                  <div className={style.button_container_polaroid}>
                     <NavLink exact strict to="/cstep1">
                         <p className={`${typeName === "ontspanning" ? style.button_ontspanning : typeName === "avontuurlijk" ? style.button_avontuur : typeName === "cultuur" ? style.button_cultuur : ""}`}>Ga naar de activiteit</p>
                     </NavLink>

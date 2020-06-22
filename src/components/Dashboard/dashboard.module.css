@@ -72,6 +72,15 @@
     width: 100%;
 }
 
+.info_polaroid {
+    display: flex;
+    flex-direction: column;
+    width: 85%;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
 .image_container {
     width: 100%;
     align-self: center;
@@ -89,31 +98,29 @@
 
 .activity:nth-child(2) {
     grid-area: one;
-    width: 80%;
+    width: 70%;
     justify-self: flex-start;
     justify-content: center;
-    opacity: .8;
 }
 
 .activity:first-child {
     grid-area: two;
-    width: 80%;
+    width: 70%;
     justify-self: flex-end;
     justify-content: center;
-    opacity: .8;
 }
 
 .activity:nth-child(3){
     grid-area: three;
-    width: 115%;
+    width: 110%;
     justify-self: flex-end;
     align-self: center;
+    position: relative;
 }
 
 .option_image {
     width: 100%;
 }
-
 
 .option_text {
     composes: normal from "../../style/typo.module.css";
@@ -138,8 +145,26 @@
     text-align: center;
 }
 
+.button_container_polaroid {
+    text-align: center;
+    position: relative;
+}
+
 .button_opacity {
-    opacity: .5;
+    opacity: .3;
+}
+
+.activity:nth-child(3) .button_container{
+    position: absolute;
+    grid-area: three;
+    width: 115%;
+    justify-self: flex-end;
+    align-self: center;
+    position: absolute;
+    bottom: 28%;
+    left: 0;
+    text-align: center;
+    padding-left: 5rem;
 }
 
 .button_ontspanning {
@@ -152,9 +177,6 @@
 
 .button_avontuur {
     composes: buttonPurple from "../../style/buttons.module.css";
-}
-
-.next_container {
 }
 
 .next_flex {

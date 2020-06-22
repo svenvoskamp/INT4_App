@@ -47,7 +47,7 @@ const CStep2 = () => {
   );
   return (
     <>
-      <div className = {`container container_twee_1_${type}`}>
+      <div className = {`welcome container_twee_1_${type}`}>
         <div className="navigation">
           <div className="navigation_back">
             <NavLink exact strict to="/cstep1">
@@ -91,7 +91,7 @@ const CStep2 = () => {
             </div>
             <div>
               {makePic === false && (
-              <button onClick = {startPhoto}>WIj willen de foto hercreeren</button>
+              <img onClick = {startPhoto} src="/assets/images/camera_button.svg" />
               )}
             </div>
             <div className={style.polaroid_container}>
