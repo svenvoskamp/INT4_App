@@ -402,7 +402,7 @@ const Dashboard = () => {
                     </picture>
                   )}
                   {type.type === "Avontuurlijk" && (
-                      <picture className={style.option_image} >
+                    <picture className={style.option_image} >
                       <source className={style.option_image} type="image/webp" srcSet="/assets/images/d3_adventure.webp"/>
                       <img className={style.option_image} src="assets/images/d3_adventure.png" alt="activity"/>
                     </picture>

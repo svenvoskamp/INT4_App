@@ -47,7 +47,7 @@
 
 .info {
     display: grid;
-    grid-template-columns: 2fr 1fr 2fr;
+    grid-template-columns: 1fr auto 1fr;
 }
 
 .camera_container {
@@ -86,20 +86,26 @@
 .content_polaroid {
     position: absolute;
     overflow: hidden;
-    width: 40rem;
-    height: 40rem;
+    width: 49rem;
+    height: 50rem;
 }
 
 .polaroid_image_right {
-    width: 30rem;
-    height: 29rem;
+    width: 36rem;
+    height: 36rem;
     object-fit: cover;
     transform: rotate(7deg);
 }
 
+.make_image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .polaroid_image_left {
-    width: 30rem;
-    height: 29rem;
+    width: 36rem;
+    height: 36rem;
     object-fit: cover;
     transform: rotate(-7deg);
 }

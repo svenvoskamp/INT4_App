@@ -104,7 +104,7 @@ const CStep2 = () => {
           <div className={style.button_container}>
             {imgSrc && (
               <div>
-                <button className={`${type === "ontspanning" ? style.button_ontspanning : type === "avontuurlijk" ? style.button_adventure : type === "cultuur" ? style.button_cultuur : ""}`} onClick = {handleOnClick}>Perfect!</button>
+                <button className={`${type === "ontspanning" ? style.button_ontspanning : type === "avontuurlijk" ? style.button_avontuur : type === "cultuur" ? style.button_cultuur : ""}`} onClick = {handleOnClick}>Perfect!</button>
               </div>
             )}
           </div>
