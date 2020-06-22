@@ -31,7 +31,7 @@ const Step6 = () => {
               <h1 className={style.header_title}>{currentStep.title}</h1>
             </div>
             <div className={style.button_container}>
-          <button className={style.button} onClick = {handleOnClick}>Terug naar overzicht</button>
+          <button className={`${type === "ontspanning" ? style.button_ontspanning : type === "avontuurlijk" ? style.button_avontuur : type === "cultuur" ? style.button_cultuur : ""}`}  onClick={handleOnClick}>Terug naar overzicht</button>
           </div>
           </div>
         </div>

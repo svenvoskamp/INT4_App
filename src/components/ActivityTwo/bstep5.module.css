@@ -19,7 +19,7 @@
 
 .header_title {
     composes: title from "../../style/typo.module.css";
-    margin-bottom: 1rem;
+    margin-bottom: 5rem;
 }
 
 .text {
@@ -30,6 +30,14 @@
     text-align: center;
 }
 
-.button {
+.button_adventure {
     composes: buttonAdventure from "../../style/buttons.module.css";
+}
+
+.button_ontspanning {
+    composes: buttonRelax from "../../style/buttons.module.css";
+}
+
+.button_cultuur {
+    composes: buttonCulture from "../../style/buttons.module.css";
 }

@@ -119,7 +119,7 @@ body {
 }
 
 .no-webp .dashboard {
-  background-image: url(/assets/backgrounds/dashboard_left.png), url(/assets/backgrounds/dashboard_background.png);
+  background-image: url(/assets/backgrounds/dashboard_left.png), url(/assets/backgrounds/dashboard_background.jpg);
   background-size: left, cover;
 }
 

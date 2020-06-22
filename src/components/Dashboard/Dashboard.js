@@ -47,13 +47,16 @@ const Dashboard = () => {
               <div className={style.header_subtitle}>
                 <p className={style.subtitle}>"Dag {uiStore.currentDay} van jullie <span className={style.bold}>{journeyType} </span>reis in {country.country}"</p>
               </div>
-              <div className={style.options}>
-                <svg width="33" height="33" viewBox="0 0 33 33" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path fillRule="evenodd" clipRule="evenodd" d="M16.5 30.9375C20.3291 30.9375 24.0013 29.4164 26.7088 26.7088C29.4164 24.0013 30.9375 20.3291 30.9375 16.5C30.9375 12.6709 29.4164 8.9987 26.7088 6.29114C24.0013 3.58359 20.3291 2.0625 16.5 2.0625C12.6709 2.0625 8.9987 3.58359 6.29114 6.29114C3.58359 8.9987 2.0625 12.6709 2.0625 16.5C2.0625 20.3291 3.58359 24.0013 6.29114 26.7088C8.9987 29.4164 12.6709 30.9375 16.5 30.9375ZM16.5 33C20.8761 33 25.0729 31.2616 28.1673 28.1673C31.2616 25.0729 33 20.8761 33 16.5C33 12.1239 31.2616 7.92709 28.1673 4.83274C25.0729 1.73839 20.8761 0 16.5 0C12.1239 0 7.92709 1.73839 4.83274 4.83274C1.73839 7.92709 0 12.1239 0 16.5C0 20.8761 1.73839 25.0729 4.83274 28.1673C7.92709 31.2616 12.1239 33 16.5 33Z" fill="#424242"/>
-                  <path fillRule="evenodd" clipRule="evenodd" d="M28.7542 6.0053L6.62926 28.1302L4.86816 26.3691L26.9931 4.24421L28.7542 6.0053Z" fill="#424242"/>
+              <label className={style.options} htmlFor="time">
+                <input className={style.checkbox} type="checkbox" id="time" name="time" value="time" />   
+                <div className={style.flex}>
+                <svg className={style.svg_time} width="33" height="33" viewBox="0 0 33 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect className={style.time_icon}x="8" y="15" width="17" height="2" />
+                  <circle className={style.time_circle} cx="16.5" cy="16.5" r="15.5" stroke-width="2"/>
                 </svg>
-                <p className={style.option_text}>Quality-Time</p>
-              </div>
+                  <p className={style.option_text}>Quality-Time</p>       
+                </div>      
+              </label>
               <div className={style.options}>
                 <svg width="33" height="33" viewBox="0 0 33 33" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path fillRule="evenodd" clipRule="evenodd" d="M16.5 30.9375C20.3291 30.9375 24.0013 29.4164 26.7088 26.7088C29.4164 24.0013 30.9375 20.3291 30.9375 16.5C30.9375 12.6709 29.4164 8.9987 26.7088 6.29114C24.0013 3.58359 20.3291 2.0625 16.5 2.0625C12.6709 2.0625 8.9987 3.58359 6.29114 6.29114C3.58359 8.9987 2.0625 12.6709 2.0625 16.5C2.0625 20.3291 3.58359 24.0013 6.29114 26.7088C8.9987 29.4164 12.6709 30.9375 16.5 30.9375ZM16.5 33C20.8761 33 25.0729 31.2616 28.1673 28.1673C31.2616 25.0729 33 20.8761 33 16.5C33 12.1239 31.2616 7.92709 28.1673 4.83274C25.0729 1.73839 20.8761 0 16.5 0C12.1239 0 7.92709 1.73839 4.83274 4.83274C1.73839 7.92709 0 12.1239 0 16.5C0 20.8761 1.73839 25.0729 4.83274 28.1673C7.92709 31.2616 12.1239 33 16.5 33Z" fill="#424242"/>
@@ -82,39 +85,30 @@ const Dashboard = () => {
         <div className={style.info}>
               {currentDayActivitiesDisabled.map(activity => (
                 <div className={style.activity} key = {activity.id}>
-                  <picture className={style.option_image} key={activity.id}>
+                  <picture className={style.image_container} key={activity.id}>
                     <source className={style.option_image} type="image/webp" srcSet={`${activity.img}.webp`}/>
                     <img className={style.option_image} src={`${activity.img}.png`} alt="activity"/>
                   </picture>
                   <div className={style.button_container}>
-                    {day === 1 &&
-                    <NavLink exact strict to="/step1">
-                        <p className={`${typeName === "ontspanning" ? style.button_ontspanning : typeName === "avontuurlijk" ? style.button_avontuur : typeName === "cultuur" ? style.button_cultuur : ""}`}>Ga naar de activiteit</p>
-                    </NavLink>
-                    }
-                    {day === 2 &&
-                    <NavLink exact strict to="/bstep1">
-                        <p className={`${typeName === "ontspanning" ? style.button_ontspanning : typeName === "avontuurlijk" ? style.button_avontuur : typeName === "cultuur" ? style.button_cultuur : ""}`}>Ga naar de activiteit</p>
-                    </NavLink>
-                    }
+                        <p className={ `${style.button_opacity} ${typeName === "ontspanning" ? style.button_ontspanning : typeName === "avontuurlijk" ? style.button_avontuur : typeName === "cultuur" ? style.button_cultuur : ""}`}>{activity.title}</p>
                   </div>
                 </div>
               ))
               }
                <div className={style.activity}>
-                  <picture className={style.option_image} key={activeCurrentDayActivity.id}>
+                  <picture className={style.image_container}  key={activeCurrentDayActivity.id}>
                     <source className={style.option_image} type="image/webp" srcSet={`${activeCurrentDayActivity.img}.webp`}/>
                     <img className={style.option_image} src={`${activeCurrentDayActivity.img}.png`} alt="activity"/>
                   </picture>
                   <div className={style.button_container}>
                     {day === 1 &&
                     <NavLink exact strict to="/step1">
-                        <p className={`${typeName === "ontspanning" ? style.button_ontspanning : typeName === "avontuurlijk" ? style.button_avontuur : typeName === "cultuur" ? style.button_cultuur : ""}`}>Ga naar de activiteit</p>
+                        <p className={`${typeName === "ontspanning" ? style.button_ontspanning : typeName === "avontuurlijk" ? style.button_avontuur : typeName === "cultuur" ? style.button_cultuur : ""}`}>{activeCurrentDayActivity.title}</p>
                     </NavLink>
                     }
                     {day === 2 &&
                     <NavLink exact strict to="/bstep1">
-                        <p className={`${typeName === "ontspanning" ? style.button_ontspanning : typeName === "avontuurlijk" ? style.button_avontuur : typeName === "cultuur" ? style.button_cultuur : ""}`}>Ga naar de activiteit</p>
+                        <p className={`${typeName === "ontspanning" ? style.button_ontspanning : typeName === "avontuurlijk" ? style.button_avontuur : typeName === "cultuur" ? style.button_cultuur : ""}`}>{activeCurrentDayActivity.title}</p>
                     </NavLink>
                     }
                   </div>
