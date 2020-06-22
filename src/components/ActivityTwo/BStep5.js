@@ -13,6 +13,7 @@ const BStep5 = () => {
   const history = useHistory();
 
   const handleOnClick = () => {
+    uiStore.setActivityTwoDone();
     history.push(ROUTES.dashboard);
   }
 

@@ -12,6 +12,7 @@ const Step6 = () => {
   const currentStep = stepStore.getStepByCurrentStep(6);
 
   const handleOnClick = () => {
+    uiStore.setActivityOneDone();
     history.push(ROUTES.dashboard);
   }
 

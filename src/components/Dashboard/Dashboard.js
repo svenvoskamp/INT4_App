@@ -231,12 +231,12 @@ const Dashboard = () => {
                     <img className={style.option_image} src={`${activeCurrentDayActivity.img}.png`} alt="activity"/>
                   </picture>
                   <div className={style.button_container}>
-                    {day === 1 &&
+                    {day === 1 && uiStore.activityOneDone === false &&
                     <NavLink exact strict to="/step1">
                         <p className={`${typeName === "ontspanning" ? style.button_ontspanning : typeName === "avontuurlijk" ? style.button_avontuur : typeName === "cultuur" ? style.button_cultuur : ""}`}>{activeCurrentDayActivity.title}</p>
                     </NavLink>
                     }
-                    {day === 2 &&
+                    {day === 2 && uiStore.activityTwoDone === false &&
                     <NavLink exact strict to="/bstep1">
                         <p className={`${typeName === "ontspanning" ? style.button_ontspanning : typeName === "avontuurlijk" ? style.button_avontuur : typeName === "cultuur" ? style.button_cultuur : ""}`}>{activeCurrentDayActivity.title}</p>
                     </NavLink>

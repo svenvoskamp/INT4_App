@@ -10,6 +10,8 @@ class UiStore {
     this.currentDay = 1;
     this.currentCountry = undefined;
     this.currentType = undefined;
+    this.activityOneDone = false;
+    this.activityTwoDone = false;
     this.authService = new AuthService(this.rootStore.firebase, this.onAuthStateChanged);
   }
 
@@ -63,6 +65,14 @@ class UiStore {
     this.currentDay = day;
   }
 
+  setActivityOneDone() {
+    this.activityOneDone = true;
+  }
+
+  setActivityTwoDone() {
+    this.activityTwoDone = true;
+  }
+
   logoutUser = async () => {
     const result = await this.authService.logout();
     this.rootStore.bookingStore.empty();
@@ -88,6 +98,10 @@ decorate(UiStore, {
   currentDay: observable,
   currentType: observable,
   currentCountry: observable,
+  activityOneDone: observable,
+  activityTwoDone: observable,
+  setActivityOneDone: action,
+  setActivityTwoDone: action,
   setCurrentUser: action,
   setCurrentBooking: action,
   setCurrentDay: action,
