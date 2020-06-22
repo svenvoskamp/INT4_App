@@ -71,6 +71,9 @@ const Login = () => {
                   </div>
                   <div className={style.button_container}>
                     <p className={style.form_error}>{formError}</p>
+                    {uiStore.currentUser && !uiStore.currentBooking && (
+                       <p className={style.form_error}>Gelieve een boeking te maken voor dit account op onze site!</p>
+                    )}
                     <input className={style.button} type="submit" value="Login"/>
                   </div>
                 </form>
