@@ -38,7 +38,12 @@
     height: 3rem;
     width: 3rem;
     margin-right: 1rem;
-  }
+}
+
+.audio {
+    width: 35%;
+    align-self: flex-end;
+}
 
 .info {
     width: 50%;
