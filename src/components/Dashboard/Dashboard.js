@@ -409,7 +409,7 @@ const Dashboard = () => {
                   )}
                   <div className={style.button_container_polaroid}>
                     <NavLink exact strict to="/cstep1">
-                        <p className={`${typeName === "ontspanning" ? style.button_ontspanning : typeName === "avontuurlijk" ? style.button_avontuur : typeName === "cultuur" ? style.button_cultuur : ""}`}>Ga naar de activiteit</p>
+                        <p className={`${typeName === "ontspanning" ? style.button_ontspanning : typeName === "avontuurlijk" ? style.button_avontuur : typeName === "cultuur" ? style.button_cultuur : ""}`}>Recreër jullie foto!</p>
                     </NavLink>
                   </div>
                 </div>

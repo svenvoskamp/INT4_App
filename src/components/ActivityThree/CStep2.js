@@ -41,7 +41,7 @@ const CStep2 = () => {
       const imageSrc = webcamRef.current.getScreenshot();
       setImgSrc(imageSrc);
       setMakePic(false);
-      setText("Wij zullen jullie deze foto later opsturen");
+      setText("Wij zullen jullie deze foto later opsturen!");
     },
     [webcamRef]
   );
@@ -89,7 +89,7 @@ const CStep2 = () => {
               </>
               )}
             </div>
-            <div>
+            <div className={style.make_image}>
               {makePic === false && (
               <img onClick = {startPhoto} src="/assets/images/camera_button.svg" />
               )}
