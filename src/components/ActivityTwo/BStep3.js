@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useStores } from "../../hooks/index";
-import { useHistory, NavLink } from "react-router-dom";
+import {NavLink } from "react-router-dom";
 import style from "./bstep3.module.css";
 
 
@@ -36,12 +36,12 @@ const BStep3 = () => {
         <div className="navigation">
           <div className="navigation_back">
             <NavLink exact strict to="/bstep2">
-              <img src="/assets/buttons/back_white.svg" />
+              <img src="/assets/buttons/back_white.svg" alt ="back" />
             </NavLink>
           </div>
           <div className="navigation_quit">
             <NavLink exact strict to="/dashboard">
-            <img src="/assets/buttons/quit_white.svg" />
+            <img src="/assets/buttons/quit_white.svg" alt = "quit" />
             </NavLink>
           </div>
         </div>
@@ -87,7 +87,7 @@ const BStep3 = () => {
             </div>
           </div>
           <NavLink className={style.button_container} exact strict to="/bstep4">
-            <img src="/assets/buttons/arrow_white.svg" />
+            <img src="/assets/buttons/arrow_white.svg" alt ="arrow" />
           </NavLink>
         </div>
       </div>

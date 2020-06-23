@@ -29,17 +29,14 @@ class UiStore {
       })
       await this.rootStore.userStore.createUser(newUser);
        await this.rootStore.bookingStore.getBookings();
-
-      console.log("De user is ingelogd");
       const currentUser = this.rootStore.userStore.getUserById(newUser.id);
-      if(currentUser == undefined){
+      if(currentUser === undefined){
       this.setCurrentUser(newUser);
       }else {
       this.setCurrentUser(currentUser);
       }
 
     }else {
-      console.log("De user is nu uitgelogd");
       this.setCurrentUser(undefined);
     }
 }

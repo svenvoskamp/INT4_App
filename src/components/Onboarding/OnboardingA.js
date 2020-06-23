@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import { Switch, Route, NavLink, Redirect } from "react-router-dom";
+import React from "react";
+import {NavLink } from "react-router-dom";
 import { useStores } from "../../hooks/index";
 import style from "./onboardinga.module.css";
 
@@ -8,8 +8,6 @@ const OnboardingA = () => {
   const booking = uiStore.currentBooking;
   const country = countryStore.getCountryById(booking.countryId);
   const type = typeStore.getTypeById(booking.typeId);
-  const count = uiStore.currentBooking.count;
-  console.log(booking, type, country);
   let journeyType;
   if(type.type === "Ontspanning"){
     journeyType = "ontspannende";
@@ -57,12 +55,12 @@ const OnboardingA = () => {
             <div>
             <div className={style.onboard_flow}>
               <div className={style.flow}>
-                <img className={style.flow_icon} src="/assets/buttons/bol_full.svg" />
-                <img className={style.flow_icon} src="/assets/buttons/bol_outline.svg" />
-                <img className={style.flow_icon} src="/assets/buttons/bol_outline.svg" />
+                <img className={style.flow_icon} src="/assets/buttons/bol_full.svg" alt ="bol" />
+                <img className={style.flow_icon} src="/assets/buttons/bol_outline.svg" alt ="bol" />
+                <img className={style.flow_icon} src="/assets/buttons/bol_outline.svg" alt ="bol" />
               </div>
               <NavLink className={style.button_container} exact strict to="/onboardingb">
-                <img src="/assets/buttons/arrow_black.svg" />
+                <img src="/assets/buttons/arrow_black.svg" alt ="arrow" />
               </NavLink>
             </div>
           </div>

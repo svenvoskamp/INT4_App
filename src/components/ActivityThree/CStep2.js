@@ -9,7 +9,7 @@ import { ROUTES } from "../../consts";
 
 
 const CStep2 = () => {
-  const { uiStore, stepStore, typeStore} = useStores();
+  const { uiStore, typeStore} = useStores();
   const typeid = typeStore.getTypeById(uiStore.currentBooking.typeId);
   const type = typeid.type.toLowerCase();
   const history = useHistory();
@@ -17,7 +17,7 @@ const CStep2 = () => {
   const [imgSrc, setImgSrc] = useState("");
   const [makePic, setMakePic] = useState(false);
   const [text, setText] =useState("Een foto zegt meer dan 1000 woorden");
-  console.log(imgSrc);
+ 
 
   const startPhoto = () => {
     setMakePic(true);
@@ -51,12 +51,12 @@ const CStep2 = () => {
         <div className="navigation">
           <div className="navigation_back">
             <NavLink exact strict to="/cstep1">
-              <img src="/assets/buttons/back_white.svg" />
+              <img src="/assets/buttons/back_white.svg" alt = "back_white" />
             </NavLink>
           </div>
           <div className="navigation_quit">
             <NavLink exact strict to="/dashboard">
-            <img src="/assets/buttons/quit_white.svg" />
+            <img src="/assets/buttons/quit_white.svg" alt = "quit_white" />
             </NavLink>
           </div>
         </div>
@@ -84,19 +84,19 @@ const CStep2 = () => {
                 <>
               <Webcam className={style.camera} audio={false} height={1024} ref={webcamRef} screenshotFormat="image/jpeg" width={1366}  />
               <div className={style.camera_button_container}>
-                <img src="/assets/images/camera_button.svg" className={style.test} onClick={capture} />
+                <img src="/assets/images/camera_button.svg" alt = "camera_button" className={style.test} onClick={capture} />
               </div>
               </>
               )}
             </div>
             <div className={style.make_image}>
               {makePic === false && (
-              <img onClick = {startPhoto} src="/assets/images/camera_button.svg" />
+              <img onClick = {startPhoto} src="/assets/images/camera_button.svg" alt = "camera button" />
               )}
             </div>
             <div className={style.polaroid_container}>
               {imgSrc && (
-                <img src={imgSrc} className = {style.polaroid_image_right} />
+                <img src={imgSrc} className = {style.polaroid_image_right} alt ="bol" />
               )}
               <img className={style.content_polaroid} src="/assets/images/polaroid_right.png" alt="polaroid" />
             </div>

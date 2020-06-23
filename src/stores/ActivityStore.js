@@ -1,4 +1,4 @@
-import {decorate, observable, action, configure} from 'mobx';
+import {decorate, observable, configure} from 'mobx';
 import ActivityService from "../services/ActivityService";
 
 configure({
@@ -18,11 +18,8 @@ class ActivityStore {
 
 
   getActivitiesForCurrentDay(typeId, countryId, currentDay){
-    console.log("hoi");
     const countryActivities = this.activities.filter(activity => activity.countryId.includes(countryId));
-    console.log(countryActivities);
     const typeActivities = countryActivities.filter(activity => activity.typeId.includes(typeId));
-    console.log(typeActivities);
     const currentDayActivities = typeActivities.filter(activity => activity.day === currentDay);
     return currentDayActivities;
   }
@@ -46,7 +43,6 @@ class ActivityStore {
    }
 
    onActivityChange = activity => {
-     console.log(activity);
      this.addActivity(activity);
    }
 

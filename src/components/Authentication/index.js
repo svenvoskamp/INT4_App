@@ -1,6 +1,6 @@
 import React from "react";
 import 'mobx-react-lite/batchingForReactDom'
-import { Switch, Route, NavLink, Redirect } from "react-router-dom";
+import { Switch, Route, Redirect } from "react-router-dom";
 import { ROUTES } from "../../consts";
 import Login from "./Login";
 import Dashboard from "../Dashboard/Dashboard";

@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import { Switch, Route, NavLink, Redirect } from "react-router-dom";
+import React from "react";
+import {NavLink } from "react-router-dom";
 import style from "./onboardingb.module.css";
 
 const OnboardingB = () => {
@@ -10,7 +10,7 @@ const OnboardingB = () => {
         <div className={style.content}>
           <div className={style.part}>
           <div className="menu">
-            <img className="menu_item" src="/assets/buttons/service_black.svg" />
+            <img className="menu_item" src="/assets/buttons/service_black.svg" alt ="bol" />
           </div>
             <div className={style.header}>
               <h1 className={style.header_title}>Service gewenst?</h1>
@@ -21,12 +21,12 @@ const OnboardingB = () => {
           </div>
           <div className={style.onboard_flow}>
             <div className={style.flow}>
-              <img className={style.flow_icon} src="/assets/buttons/bol_full.svg" />
-              <img className={style.flow_icon} src="/assets/buttons/bol_full.svg" />
-              <img className={style.flow_icon} src="/assets/buttons/bol_outline.svg" />
+              <img className={style.flow_icon} src="/assets/buttons/bol_full.svg" alt ="bol"/>
+              <img className={style.flow_icon} src="/assets/buttons/bol_full.svg" alt ="bol" />
+              <img className={style.flow_icon} src="/assets/buttons/bol_outline.svg" alt ="bol" />
             </div>
           <NavLink className={style.button_container} exact strict to="/onboardingc">
-            <img src="/assets/buttons/arrow_black.svg" />
+            <img src="/assets/buttons/arrow_black.svg" alt ="arrow" />
           </NavLink>
           </div>
         </div>

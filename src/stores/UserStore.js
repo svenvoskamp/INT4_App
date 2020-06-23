@@ -31,7 +31,7 @@ class UserStore {
   createUser = async user => {
      await this.userService.create(user);
      const result = this.getUserById(user.id);
-     if(result == undefined){
+     if(result === undefined){
        this.addUser(user);
      }
      this.rootStore.uiStore.setCurrentUser(user);

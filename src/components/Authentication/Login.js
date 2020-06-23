@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { useStores } from "../../hooks/index";
 import User from "../../models/User";
-import { useHistory } from "react-router-dom";
 import style from "./login.module.css"
 
 const Login = () => {
@@ -14,8 +13,7 @@ const Login = () => {
 
   const handleGoogleLogin = async e => {
     e.preventDefault();
-      const result = await uiStore.signInWithPopUp();
-      console.log(result);
+      await uiStore.signInWithPopUp();
     };
 
 
@@ -40,7 +38,7 @@ const Login = () => {
      if(result === "auth/user-not-found" || result === "auth/invalid"){
        setFormError("De inloggegevens zijn onjuist");
      }
-     if(uiStore.currentUser && !uiStore.currentBooking){
+     if(uiStore.currentUser !== undefined && !uiStore.currentBooking){
        setFormError("Gelieve een boeking te doen voor dit account op onze website");
      }
   };

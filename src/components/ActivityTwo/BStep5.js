@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { useStores } from "../../hooks/index";
 import { useHistory, NavLink } from "react-router-dom";
 import style from "./bstep5.module.css";
@@ -23,7 +23,7 @@ const BStep5 = () => {
         <div className="navigation">
           <div className="navigation_quit">
             <NavLink exact strict to="/dashboard">
-            <img src="/assets/buttons/quit_white.svg" />
+            <img src="/assets/buttons/quit_white.svg"  alt ="quit"/>
             </NavLink>
           </div>
         </div>

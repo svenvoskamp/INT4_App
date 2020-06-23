@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useStores } from "../../hooks/index";
-import { Switch, Route, NavLink, Redirect } from "react-router-dom";
+import {NavLink } from "react-router-dom";
 import style from "./dashboard.module.css";
 
 const Dashboard = () => {
@@ -60,7 +60,7 @@ const Dashboard = () => {
           <div className={style.part}>
             <div className={style.header}>
               <div className={style.header_profile}>
-                <img className={style.header_logo} src= {`${typeName === "ontspanning" ? "/assets/images/halo_blue.svg" : typeName === "avontuurlijk" ? "/assets/images/halo_purple.svg" : typeName === "cultuur" ? "/assets/images/halo_orange.svg"  : ""}`}/>
+                <img className={style.header_logo} alt ="bol" src= {`${typeName === "ontspanning" ? "/assets/images/halo_blue.svg" : typeName === "avontuurlijk" ? "/assets/images/halo_purple.svg" : typeName === "cultuur" ? "/assets/images/halo_orange.svg"  : ""}` }/>
                 <h1 className={`${typeName === "ontspanning" ? style.title_blue : typeName === "avontuurlijk" ? style.title_purple : typeName === "cultuur" ? style.title_orange: ""}`}>{uiStore.currentBooking.name1} & {uiStore.currentBooking.name2}</h1>
               </div>
               <div className={style.header_subtitle}>
@@ -200,13 +200,13 @@ const Dashboard = () => {
               {day === 1 && (
                 <div className={style.next_flex} onClick = {handleNextDay}>
                   <p className={style.next} >Volgende dag</p>
-                  <img src="/assets/images/next_day.svg" />
+                  <img src="/assets/images/next_day.svg" alt ="bol" />
                 </div>
                 )}
                 {day === 2 && (
                 <div className={style.next_flex} onClick = {handleNextDay}>
                   <p className={style.next} >Volgende dag</p>
-                  <img src="/assets/images/next_day.svg" />
+                  <img src="/assets/images/next_day.svg" alt ="bol" />
                 </div>
               )}
             </div>
@@ -257,7 +257,7 @@ const Dashboard = () => {
           <div className={style.part}>
             <div className={style.header}>
               <div className={style.header_profile}>
-                <img className={style.header_logo} src= {`${typeName === "ontspanning" ? "/assets/images/halo_blue.svg" : typeName === "avontuurlijk" ? "/assets/images/halo_purple.svg" : typeName === "cultuur" ? "/assets/images/halo_orange.svg"  : ""}`}/>
+                <img className={style.header_logo} alt ="bol" src= {`${typeName === "ontspanning" ? "/assets/images/halo_blue.svg" : typeName === "avontuurlijk" ? "/assets/images/halo_purple.svg" : typeName === "cultuur" ? "/assets/images/halo_orange.svg"  : ""}`}/>
                 <h1 className={`${typeName === "ontspanning" ? style.title_blue : typeName === "avontuurlijk" ? style.title_purple : typeName === "cultuur" ? style.title_orange: ""}`}>{uiStore.currentBooking.name1} & {uiStore.currentBooking.name2}</h1>
               </div>
               <div className={style.header_subtitle}>

@@ -1,6 +1,6 @@
-import React, { useState } from "react";
+import React from "react";
 import { useStores } from "../../hooks/index";
-import { useHistory, NavLink } from "react-router-dom";
+import {NavLink } from "react-router-dom";
 import style from "./step3.module.css";
 
 const Step3 = () => {
@@ -22,12 +22,12 @@ const Step3 = () => {
         <div className="navigation">
           <div className="navigation_back">
             <NavLink exact strict to="/step2">
-              <img src="/assets/buttons/back_white.svg" />
+              <img src="/assets/buttons/back_white.svg" alt ="back" />
             </NavLink>
           </div>
           <div className="navigation_quit">
             <NavLink exact strict to="/dashboard">
-              <img src="/assets/buttons/quit_white.svg" />
+              <img src="/assets/buttons/quit_white.svg" alt ="quit" />
             </NavLink>
           </div>
         </div>
@@ -38,7 +38,7 @@ const Step3 = () => {
               <div className={style.header_subtitle}>
                 <div className={style.line}></div>
                 <p className={style.subtitle}>"{currentStep.tagline}"</p>
-              </div> 
+              </div>
             </div>
             <ul className={style.info}>
               <li className={style.text}>{currentStep.text1}</li>
@@ -47,7 +47,7 @@ const Step3 = () => {
             </ul>
           </div>
           <NavLink className={style.button_container} exact strict to="/step4">
-            <img src="/assets/buttons/arrow_white.svg" />
+            <img src="/assets/buttons/arrow_white.svg" alt = "arrow" />
           </NavLink>
         </div>
       </div>

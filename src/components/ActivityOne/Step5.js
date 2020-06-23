@@ -1,6 +1,6 @@
-import React, { useState } from "react";
+import React from "react";
 import { useStores } from "../../hooks/index";
-import { useHistory, NavLink } from "react-router-dom";
+import {NavLink } from "react-router-dom";
 import style from "./step5.module.css";
 
 const Step5 = () => {
@@ -15,12 +15,12 @@ const Step5 = () => {
       <div className="navigation">
         <div className="navigation_back">
           <NavLink exact strict to="/step4">
-            <img src="/assets/buttons/back_white.svg" />
+            <img src="/assets/buttons/back_white.svg" alt ="bol" />
           </NavLink>
         </div>
         <div className="navigation_quit">
           <NavLink exact strict to="/dashboard">
-            <img src="/assets/buttons/quit_white.svg" />
+            <img src="/assets/buttons/quit_white.svg" alt ="bol" />
           </NavLink>
         </div>
         </div>
@@ -31,14 +31,14 @@ const Step5 = () => {
               <div className={style.header_subtitle}>
                 <div className={style.line}></div>
                 <p className={style.subtitle}>"{currentStep.tagline}"</p>
-              </div> 
+              </div>
             </div>
             <div className={style.info}>
               <p className={style.text}>{currentStep.text1}</p>
             </div>
           </div>
           <NavLink className={style.button_container} exact strict to="/step6">
-            <img src="/assets/buttons/arrow_white.svg" />
+            <img src="/assets/buttons/arrow_white.svg" alt = "arrow" />
           </NavLink>
         </div>
       </div>

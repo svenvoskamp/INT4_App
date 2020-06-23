@@ -1,5 +1,4 @@
 import {decorate, observable, action, configure} from 'mobx';
-import Booking from '../models/Booking';
 import BookingService from "../services/BookingService";
 
 configure({
@@ -29,7 +28,7 @@ class BookingStore {
 
   onBookingChange = booking => {
     const result = this.getBookingById(booking.id);
-    if(result == undefined){
+    if(result === undefined){
     this.addBooking(booking);
     }
     const user = this.rootStore.userStore.getUserById(booking.userId);
@@ -38,7 +37,7 @@ class BookingStore {
     if(user){
     const bookingResult = this.rootStore.userStore.getBookingForUserById(user, booking.id)
     this.rootStore.uiStore.setCurrentBooking(booking);
-    if(bookingResult == undefined){
+    if(bookingResult === undefined){
     user.linkBooking(booking);
     booking.linkUser(user);
     }

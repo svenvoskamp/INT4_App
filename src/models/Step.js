@@ -1,4 +1,4 @@
-import {observable, action, decorate, configure, computed} from 'mobx';
+import {decorate, configure} from 'mobx';
 import {v4} from 'uuid';
 
 configure({

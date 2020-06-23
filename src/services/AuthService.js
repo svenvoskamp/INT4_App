@@ -20,7 +20,6 @@ class AuthService {
     const result = firebase.auth().signInWithPopup(provider);
     return result;
     } catch(error) {
-        console.log(error);
     };
   }
 
@@ -29,7 +28,6 @@ class AuthService {
       const result = await firebase.auth().signOut();
       return result;
     }catch(error) {
-      console.log(error);
       };
     };
 

@@ -1,10 +1,10 @@
-import React, { useState } from "react";
+import React from "react";
 import { useStores } from "../../hooks/index";
-import { useHistory, NavLink } from "react-router-dom";
+import {NavLink } from "react-router-dom";
 import style from "./cstep1.module.css";
 
 const CStep1 = () => {
-  const { uiStore, stepStore, typeStore} = useStores();
+  const { uiStore, typeStore} = useStores();
   const typeid = typeStore.getTypeById(uiStore.currentBooking.typeId);
   const type = typeid.type.toLowerCase();
 
@@ -14,12 +14,12 @@ const CStep1 = () => {
         <div className="navigation">
           <div className="navigation_back">
             <NavLink exact strict to="/dashboard">
-              <img src="/assets/buttons/back_white.svg" />
+              <img src="/assets/buttons/back_white.svg" alt ="back" />
             </NavLink>
           </div>
           <div className="navigation_quit">
             <NavLink exact strict to="/dashboard">
-            <img src="/assets/buttons/quit_white.svg" />
+            <img src="/assets/buttons/quit_white.svg" alt ="quit" />
             </NavLink>
           </div>
         </div>
@@ -29,11 +29,11 @@ const CStep1 = () => {
               <h1 className={style.header_title}>Memories</h1>
               <div className={style.header_subtitle}>
                 <p className={style.subtitle}>"Een foto zegt meer dan 1000 woorden"</p>
-              </div> 
+              </div>
             </div>
           </div>
           <NavLink className={style.button_container} exact strict to="/cstep2">
-            <img src="/assets/buttons/arrow_white.svg" />
+            <img src="/assets/buttons/arrow_white.svg" alt ="bol" />
           </NavLink>
         </div>
       </div>

@@ -1,10 +1,10 @@
-import React, { useState } from "react";
-import { Switch, Route, NavLink, Redirect } from "react-router-dom";
+import React from "react";
+import { NavLink} from "react-router-dom";
 import { useStores } from "../../hooks/index";
 import style from "./welcome.module.css";
 
 const Welcome = () => {
-  const { uiStore, countryStore, typeStore } = useStores();
+  const { uiStore } = useStores();
   const booking = uiStore.currentBooking;
   const count = uiStore.currentBooking.count;
 

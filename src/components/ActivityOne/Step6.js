@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { useStores } from "../../hooks/index";
 import { useHistory, NavLink } from "react-router-dom";
 import { ROUTES } from "../../consts";
@@ -9,7 +9,6 @@ const Step6 = () => {
   const { uiStore, stepStore, typeStore} = useStores();
   const typeid = typeStore.getTypeById(uiStore.currentBooking.typeId);
   const type = typeid.type.toLowerCase();
-  console.log(type);
   const currentStep = stepStore.getStepByCurrentStep(6);
 
   const handleOnClick = () => {
@@ -23,7 +22,7 @@ const Step6 = () => {
         <div className="navigation">
           <div className="navigation_quit">
             <NavLink exact strict to="/dashboard">
-              <img src="/assets/buttons/quit_white.svg" />
+              <img src="/assets/buttons/quit_white.svg" alt ="quit" />
             </NavLink>
           </div>
         </div>
