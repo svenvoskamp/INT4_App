@@ -44,6 +44,11 @@
     width: 50%;
 }
 
+.audio {
+    width: 35%;
+    align-self: flex-end;
+}
+
 .text {
     composes: text from "../../style/typo.module.css";
 }
