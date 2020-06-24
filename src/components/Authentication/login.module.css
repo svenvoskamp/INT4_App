@@ -92,4 +92,5 @@
 
 .form_error {
     composes: error from "../../style/typo.module.css";
+    padding-bottom: 2rem;
 }

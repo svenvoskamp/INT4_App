@@ -14,6 +14,9 @@ const Login = () => {
   const handleGoogleLogin = async e => {
     e.preventDefault();
       await uiStore.signInWithPopUp();
+      if(uiStore.currentUser !== undefined && !uiStore.currentBooking){
+        await setFormError("Gelieve een boeking te maken voor dit account op onze website.");
+      }
     };
 
 
@@ -39,7 +42,7 @@ const Login = () => {
        setFormError("De inloggegevens zijn onjuist");
      }
      if(uiStore.currentUser !== undefined && !uiStore.currentBooking){
-       setFormError("Gelieve een boeking te doen voor dit account op onze website");
+       setFormError("Gelieve een boeking te maken voor dit account op onze website.");
      }
   };
 
