@@ -17,7 +17,7 @@ const Welcome = () => {
             <div className={style.header}>
               <h1 className={style.header_title}>Proficiat met jullie {booking.count}-jarige jubileum {booking.name1} & {booking.name2}!</h1>
               <div className={style.header_subtitle}>
-                <p className={style.subtitle}>“Lets take a walk down memory lane and pretend to meet eachother all over again.”</p>
+                <p className={style.subtitle}>“Lets take a walk down memory lane and pretend to meet each other all over again.”</p>
               </div>
             </div>
           </div>

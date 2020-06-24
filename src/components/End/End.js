@@ -30,7 +30,7 @@ const End = () => {
           <img width="70" height="40" src="/assets/buttons/logo_halo.svg" alt = "logo" />
           <h1 className={style.header_title}>{journeyType}</h1>
           <div className={style.header_subtitle}>
-                <p className={style.subtitle}>"Wij vonden het alvast een fantastische periode! Hopelijk hebben jullie er ook van genoten!"</p>
+                <p className={style.subtitle}>"Hopelijk hebben jullie er van genoten!"</p>
               </div>
           </div>
         </div>

@@ -15,7 +15,7 @@ const OnboardingB = () => {
             <div className={style.header}>
               <h1 className={style.header_title}>Service gewenst?</h1>
               <div className={style.header_subtitle}>
-                <p className={style.subtitle}>“Wanneer jullie drinken of eten wensen te bestellen kunnen jullie op volgend embleem klikken bovenaan. 2 minuten later zullen we aan de deur kloppen om jullie verzoek aan te horen”</p>
+                <p className={style.subtitle}>“Wanneer jullie drinken of eten wensen te bestellen kunnen jullie op volgend embleem klikken bovenaan. We komen dan spoedig naar jullie toe om jullie wensen te vervullen!”</p>
               </div>
             </div>
           </div>

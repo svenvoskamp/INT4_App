@@ -20,6 +20,18 @@ const OnboardingA = () => {
     journeyType = "avontuurlijke";
   }
 
+  let journeyDetails;
+  if(type.type === "Ontspanning"){
+    journeyDetails = "intimiteit en relaxatie";
+  }
+  if(type.type === "Cultuur"){
+    journeyDetails = "tradities en gewoontes";
+  }
+
+  if(type.type === "Avontuurlijk"){
+    journeyDetails = "spanning en sensatie";
+  }
+
   return (
     <>
       <div className= "welcome onboardinga">
@@ -28,7 +40,7 @@ const OnboardingA = () => {
             <div className={style.header}>
               <h1 className={style.header_title}>Zijn jullie klaar voor deze prachtige reis?</h1>
               <div className={style.header_subtitle}>
-                <p className={style.subtitle}>"Jullie zullen een <span className={style.bold}>{journeyType} reis </span> maken door het <span className={style.bold}>prachtige {country.country}</span>". Focus op elkaar en geniet van <span className={style.bold}>intimiteit en relaxatie</span> die jullie zullen beleven.”</p>
+                <p className={style.subtitle}>"Jullie zullen een <span className={style.bold}>{journeyType} reis </span> maken door het <span className={style.bold}>prachtige {country.country}</span>". Focus op elkaar en geniet van <span className={style.bold}>{journeyDetails}</span> die jullie zullen beleven.”</p>
               </div>
             </div>
           </div>
